@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Is_It_Prime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="BfA-hW-s6i">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is It Prime?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHO-Ec-Plk">
+                                <rect key="frame" x="239" y="61" width="121" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="88m-w8-A2H"/>
+                                    <constraint firstAttribute="width" constant="121" id="NR9-WC-5vJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a number in the box" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEy-Cy-8sJ">
+                                <rect key="frame" x="184" y="125" width="232" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="7eW-mP-pIs"/>
+                                    <constraint firstAttribute="width" constant="232" id="jxf-dJ-J0Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. 17" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OgB-p4-Bkk">
+                                <rect key="frame" x="251" y="175" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KuZ-de-dq0"/>
+                                    <constraint firstAttribute="width" constant="97" id="Ucg-Bi-3zO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0o-bg-uLO">
+                                <rect key="frame" x="257" y="255" width="86" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="WtL-hz-MyY"/>
+                                    <constraint firstAttribute="height" constant="32" id="syN-rU-k0Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Is It Prime?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="isItPrimeButtonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YGU-iA-pde"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDp-Mh-3Kt">
+                                <rect key="frame" x="159" y="295" width="281" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="xYt-v1-da6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="zI3-au-BR0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BfA-hW-s6i" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="14g-2c-hC7"/>
+                            <constraint firstAttribute="trailing" secondItem="BfA-hW-s6i" secondAttribute="trailing" id="3ML-pS-eae"/>
+                            <constraint firstItem="D0o-bg-uLO" firstAttribute="top" secondItem="OgB-p4-Bkk" secondAttribute="bottom" constant="50" id="4j1-u8-8we"/>
+                            <constraint firstAttribute="centerX" secondItem="QEy-Cy-8sJ" secondAttribute="centerX" id="CsS-78-CLd"/>
+                            <constraint firstItem="LDp-Mh-3Kt" firstAttribute="top" secondItem="D0o-bg-uLO" secondAttribute="bottom" constant="8" id="EnU-3V-7Ot"/>
+                            <constraint firstItem="QEy-Cy-8sJ" firstAttribute="top" secondItem="cHO-Ec-Plk" secondAttribute="bottom" constant="36" id="GYb-p0-FPO"/>
+                            <constraint firstItem="OgB-p4-Bkk" firstAttribute="top" secondItem="QEy-Cy-8sJ" secondAttribute="bottom" constant="26" id="I1D-8y-cTe"/>
+                            <constraint firstAttribute="centerX" secondItem="cHO-Ec-Plk" secondAttribute="centerX" id="KPa-27-Wcg"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BfA-hW-s6i" secondAttribute="bottom" id="SlM-bf-9DR"/>
+                            <constraint firstAttribute="centerX" secondItem="LDp-Mh-3Kt" secondAttribute="centerX" id="TcJ-zD-zZu"/>
+                            <constraint firstAttribute="centerX" secondItem="OgB-p4-Bkk" secondAttribute="centerX" id="gmM-sR-tHM"/>
+                            <constraint firstItem="BfA-hW-s6i" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iOu-M8-h1n"/>
+                            <constraint firstAttribute="centerX" secondItem="D0o-bg-uLO" secondAttribute="centerX" id="ptE-Fr-5w7"/>
+                            <constraint firstItem="cHO-Ec-Plk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="41" id="zMe-SN-wCK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberInputTextField" destination="OgB-p4-Bkk" id="QFF-ZA-Xf9"/>
+                        <outlet property="resultLabel" destination="LDp-Mh-3Kt" id="nUm-4k-Nty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default" width="320" height="480"/>
+    </resources>
+</document>
