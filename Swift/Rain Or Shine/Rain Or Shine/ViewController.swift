@@ -73,7 +73,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             // City
             if let city = placeMark.addressDictionary["City"] as? NSString {
-                self.userCity = city as String
+                self.userCity = "\(city), "
             }
             
             // City
@@ -81,7 +81,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.userState = state as String
             }
             
-            self.userLocationLabel?.text = "\(self.userCity), \(self.userState)"
+            self.userLocationLabel?.text = "\(self.userCity)\(self.userState)"
             
         })
     }

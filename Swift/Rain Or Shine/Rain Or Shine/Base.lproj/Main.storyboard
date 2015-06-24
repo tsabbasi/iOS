@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="60" id="F5e-2g-Mte"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcatraz Island, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybj-oV-rAr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcatraz Island, CA" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybj-oV-rAr">
                                 <rect key="frame" x="145" y="160" width="163" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Jnz-UU-gFP">
-                                <rect key="frame" x="176" y="79.5" width="20" height="20"/>
+                                <rect key="frame" x="176" y="79" width="20" height="20"/>
                             </activityIndicatorView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NjT-hM-eA6">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
