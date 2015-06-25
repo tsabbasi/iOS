@@ -52,7 +52,4 @@ class RandomGenerator: NSObject {
         return objectArray[random]
         
     }
-    
-    
-    
 }

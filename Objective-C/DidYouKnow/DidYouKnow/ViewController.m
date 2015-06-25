@@ -50,6 +50,14 @@
     self.funFactLabel.text = @"Welcome To Fun Facts By Taha.";
     
     
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:true];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,6 +100,19 @@
     
     [alert alertTitle:@"Error Downloading Facts"
          alertMessage:@"Sorry, there was an error downloading facts. Please try restarting the app, or try again later."];
+    
+    // Creating an instance of the AlertView class and initializing it
+    AlertView *testAlert = [[AlertView alloc] init];
+
+    /* Creating a UIAlertController object and then calling the method I created in the AlertView class. This way the returned UIAlertController will be assigned to this UIAlertController
+    */
+    
+    UIAlertController *alertController = [testAlert alertWithAlertTitle:@"Genius!" alertMessage:@"Pure Genius"];
+    
+    
+    // Finally presenting the alert controller
+    [self presentViewController:alertController animated:true completion:nil];
+
 
 }
 

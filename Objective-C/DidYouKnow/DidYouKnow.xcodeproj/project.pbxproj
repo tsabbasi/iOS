@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E41454E1B3C64450069C6BB /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41454D1B3C64450069C6BB /* RandomGenerator.swift */; };
+		5E4145511B3C92A10069C6BB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4145501B3C92A10069C6BB /* AlertView.swift */; };
 		5E541C931AFA6F7200345E8B /* FactBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C921AFA6F7200345E8B /* FactBook.m */; };
 		5E541C961AFA6F8E00345E8B /* ColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C951AFA6F8E00345E8B /* ColorWheel.m */; };
 		5E541C991AFA6F9700345E8B /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C981AFA6F9700345E8B /* Alert.m */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		5E4145471B3C4EA50069C6BB /* DidYouKnow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DidYouKnow-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E41454D1B3C64450069C6BB /* RandomGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		5E4145501B3C92A10069C6BB /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		5E541C911AFA6F7200345E8B /* FactBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactBook.h; sourceTree = "<group>"; };
 		5E541C921AFA6F7200345E8B /* FactBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactBook.m; sourceTree = "<group>"; };
 		5E541C941AFA6F8D00345E8B /* ColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorWheel.h; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		5E41454F1B3C8F990069C6BB /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				5E4145501B3C92A10069C6BB /* AlertView.swift */,
 				5E41454D1B3C64450069C6BB /* RandomGenerator.swift */,
 			);
 			name = Swift;
@@ -261,6 +264,7 @@
 				5E41454E1B3C64450069C6BB /* RandomGenerator.swift in Sources */,
 				5E93C2331AF91EDF003C2D50 /* AppDelegate.m in Sources */,
 				5E541C931AFA6F7200345E8B /* FactBook.m in Sources */,
+				5E4145511B3C92A10069C6BB /* AlertView.swift in Sources */,
 				5E93C2301AF91EDF003C2D50 /* main.m in Sources */,
 				5E541C961AFA6F8E00345E8B /* ColorWheel.m in Sources */,
 			);

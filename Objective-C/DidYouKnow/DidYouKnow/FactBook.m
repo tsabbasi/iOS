@@ -90,10 +90,15 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    Alert *connectionErrorAlert = [[Alert alloc] init];
-    [connectionErrorAlert
-     alertWithSettingsButtonTitle:@"Connection Failed"
-     alertMessage:@"Sorry, Could not connect to the server. Please make sure your Cellular Data or Wifi is turned on in Settings." delegate:self];
+    
+    AlertView *settingsAlert = [[AlertView alloc] init];
+    
+    UIAlertController *alertController = [settingsAlert
+                                          settingsAlertWithAlertTitle:@"Connection Failed"
+                                          alertMessage:@"Sorry, Could not connect to the server. Please make sure your Cellular Data or Wifi is turned on in Settings."];
+    UIViewController *topViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    [topViewController presentViewController:alertController animated:true completion:nil];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
