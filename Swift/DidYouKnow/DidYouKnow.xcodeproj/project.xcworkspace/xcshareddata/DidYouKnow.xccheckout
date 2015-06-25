@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>45D48A13-6C35-4AA3-990F-30DEC5E510D0</string>
+	<string>12776DA6-8E9D-461A-AF20-22FDDD5ACF05</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DidYouKnow</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,7 +14,7 @@
 		<string>https://github.com/abbasiindustries/iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Objective-C/DidYouKnow/DidYouKnow.xcodeproj</string>
+	<string>Swift/DidYouKnow/DidYouKnow.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D383CEE4960746426135DA67A38EECC19289372E</key>

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E41454E1B3C64450069C6BB /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41454D1B3C64450069C6BB /* RandomGenerator.swift */; };
 		5E541C931AFA6F7200345E8B /* FactBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C921AFA6F7200345E8B /* FactBook.m */; };
 		5E541C961AFA6F8E00345E8B /* ColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C951AFA6F8E00345E8B /* ColorWheel.m */; };
 		5E541C991AFA6F9700345E8B /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C981AFA6F9700345E8B /* Alert.m */; };
-		5E541C9C1AFA6F9F00345E8B /* RandomGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C9B1AFA6F9F00345E8B /* RandomGenerator.m */; };
 		5E93C2301AF91EDF003C2D50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E93C22F1AF91EDF003C2D50 /* main.m */; };
 		5E93C2331AF91EDF003C2D50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E93C2321AF91EDF003C2D50 /* AppDelegate.m */; };
 		5E93C2361AF91EDF003C2D50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E93C2351AF91EDF003C2D50 /* ViewController.m */; };
@@ -31,14 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E4145471B3C4EA50069C6BB /* DidYouKnow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DidYouKnow-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E41454D1B3C64450069C6BB /* RandomGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
 		5E541C911AFA6F7200345E8B /* FactBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactBook.h; sourceTree = "<group>"; };
 		5E541C921AFA6F7200345E8B /* FactBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactBook.m; sourceTree = "<group>"; };
 		5E541C941AFA6F8D00345E8B /* ColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorWheel.h; sourceTree = "<group>"; };
 		5E541C951AFA6F8E00345E8B /* ColorWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorWheel.m; sourceTree = "<group>"; };
 		5E541C971AFA6F9700345E8B /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		5E541C981AFA6F9700345E8B /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
-		5E541C9A1AFA6F9F00345E8B /* RandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomGenerator.h; sourceTree = "<group>"; };
-		5E541C9B1AFA6F9F00345E8B /* RandomGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomGenerator.m; sourceTree = "<group>"; };
 		5E93C22A1AF91EDF003C2D50 /* DidYouKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DidYouKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E93C22E1AF91EDF003C2D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E93C22F1AF91EDF003C2D50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E41454F1B3C8F990069C6BB /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				5E41454D1B3C64450069C6BB /* RandomGenerator.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
 		5E541C901AFA6F5B00345E8B /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +87,9 @@
 				5E541C921AFA6F7200345E8B /* FactBook.m */,
 				5E541C941AFA6F8D00345E8B /* ColorWheel.h */,
 				5E541C951AFA6F8E00345E8B /* ColorWheel.m */,
-				5E541C9A1AFA6F9F00345E8B /* RandomGenerator.h */,
-				5E541C9B1AFA6F9F00345E8B /* RandomGenerator.m */,
 				5E541C971AFA6F9700345E8B /* Alert.h */,
 				5E541C981AFA6F9700345E8B /* Alert.m */,
+				5E41454F1B3C8F990069C6BB /* Swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				5E93C2321AF91EDF003C2D50 /* AppDelegate.m */,
 				5E93C2341AF91EDF003C2D50 /* ViewController.h */,
 				5E93C2351AF91EDF003C2D50 /* ViewController.m */,
+				5E4145471B3C4EA50069C6BB /* DidYouKnow-Bridging-Header.h */,
 				5E93C2371AF91EDF003C2D50 /* Main.storyboard */,
 				5E93C23A1AF91EDF003C2D50 /* Images.xcassets */,
 				5E93C23C1AF91EDF003C2D50 /* LaunchScreen.xib */,
@@ -250,8 +258,8 @@
 			files = (
 				5E541C991AFA6F9700345E8B /* Alert.m in Sources */,
 				5E93C2361AF91EDF003C2D50 /* ViewController.m in Sources */,
+				5E41454E1B3C64450069C6BB /* RandomGenerator.swift in Sources */,
 				5E93C2331AF91EDF003C2D50 /* AppDelegate.m in Sources */,
-				5E541C9C1AFA6F9F00345E8B /* RandomGenerator.m in Sources */,
 				5E541C931AFA6F7200345E8B /* FactBook.m in Sources */,
 				5E93C2301AF91EDF003C2D50 /* main.m in Sources */,
 				5E541C961AFA6F8E00345E8B /* ColorWheel.m in Sources */,
@@ -380,13 +388,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Taha Abbasi (BDVAQUWX8W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Taha Abbasi (BDVAQUWX8W)";
 				CURRENT_PROJECT_VERSION = 1.1;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = DidYouKnow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "443c6fd6-4e6e-4854-bab3-11c7fefb679e";
+				SWIFT_OBJC_BRIDGING_HEADER = "DidYouKnow/DidYouKnow-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -395,13 +407,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Taha Abbasi (BDVAQUWX8W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Taha Abbasi (BDVAQUWX8W)";
 				CURRENT_PROJECT_VERSION = 1.1;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = DidYouKnow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "443c6fd6-4e6e-4854-bab3-11c7fefb679e";
+				SWIFT_OBJC_BRIDGING_HEADER = "DidYouKnow/DidYouKnow-Bridging-Header.h";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

@@ -8,7 +8,7 @@
 
 #import "FactBook.h"
 #import "Alert.h"
-#import "RandomGenerator.h"
+#import "DidYouKnow-Swift.h"
 
 @implementation FactBook
 {
@@ -106,7 +106,6 @@
 
 - (NSString *)getFact {
     
-
     
     _currentFact = [_randomGenerator
                     getRandomObjectFromArray:self.serverFactsDictionary

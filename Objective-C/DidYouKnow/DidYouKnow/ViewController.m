@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DidYouKnow-Swift.h"
 
 @interface ViewController ()
 {
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     _networkAvailable = true;
     
@@ -90,11 +92,7 @@
     
     [alert alertTitle:@"Error Downloading Facts"
          alertMessage:@"Sorry, there was an error downloading facts. Please try restarting the app, or try again later."];
-    
-    
-    
 
-    
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ColorWheel.h"
-#import "RandomGenerator.h"
+#import "DidYouKnow-Swift.h"
 
 @implementation ColorWheel
 {
@@ -36,9 +36,6 @@
 }
 
 - (UIColor *)getColor {
-    
-//    int random = arc4random_uniform((int)self.colorArray.count);
-//    return [self.colorArray objectAtIndex:random];
     
     _currentColor = [_randomGenerator getRandomObjectFromArray:self.colorArray];
     
