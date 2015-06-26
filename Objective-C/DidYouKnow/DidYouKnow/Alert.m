@@ -18,6 +18,8 @@
 }
 */
 
+
+
 - (void)alertTitle:(NSString *)title alertMessage:(NSString *)message {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                     message:message
@@ -26,6 +28,8 @@
                                           otherButtonTitles: nil];
 
     [alert show];
+    
+    
 }
 
 - (void)alertWithSettingsButtonTitle:(NSString *)title alertMessage:(NSString *)message delegate:(id)delegate {

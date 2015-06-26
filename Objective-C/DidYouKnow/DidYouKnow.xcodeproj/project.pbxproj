@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		5E41454E1B3C64450069C6BB /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41454D1B3C64450069C6BB /* RandomGenerator.swift */; };
 		5E4145511B3C92A10069C6BB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4145501B3C92A10069C6BB /* AlertView.swift */; };
+		5E41455F1B3CE62F0069C6BB /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41455E1B3CE62F0069C6BB /* ColorWheel.swift */; };
 		5E541C931AFA6F7200345E8B /* FactBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C921AFA6F7200345E8B /* FactBook.m */; };
-		5E541C961AFA6F8E00345E8B /* ColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C951AFA6F8E00345E8B /* ColorWheel.m */; };
 		5E541C991AFA6F9700345E8B /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541C981AFA6F9700345E8B /* Alert.m */; };
 		5E93C2301AF91EDF003C2D50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E93C22F1AF91EDF003C2D50 /* main.m */; };
 		5E93C2331AF91EDF003C2D50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E93C2321AF91EDF003C2D50 /* AppDelegate.m */; };
@@ -35,10 +35,9 @@
 		5E4145471B3C4EA50069C6BB /* DidYouKnow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DidYouKnow-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E41454D1B3C64450069C6BB /* RandomGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
 		5E4145501B3C92A10069C6BB /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		5E41455E1B3CE62F0069C6BB /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
 		5E541C911AFA6F7200345E8B /* FactBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactBook.h; sourceTree = "<group>"; };
 		5E541C921AFA6F7200345E8B /* FactBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactBook.m; sourceTree = "<group>"; };
-		5E541C941AFA6F8D00345E8B /* ColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorWheel.h; sourceTree = "<group>"; };
-		5E541C951AFA6F8E00345E8B /* ColorWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorWheel.m; sourceTree = "<group>"; };
 		5E541C971AFA6F9700345E8B /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		5E541C981AFA6F9700345E8B /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
 		5E93C22A1AF91EDF003C2D50 /* DidYouKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DidYouKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +78,7 @@
 			children = (
 				5E4145501B3C92A10069C6BB /* AlertView.swift */,
 				5E41454D1B3C64450069C6BB /* RandomGenerator.swift */,
+				5E41455E1B3CE62F0069C6BB /* ColorWheel.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -88,8 +88,6 @@
 			children = (
 				5E541C911AFA6F7200345E8B /* FactBook.h */,
 				5E541C921AFA6F7200345E8B /* FactBook.m */,
-				5E541C941AFA6F8D00345E8B /* ColorWheel.h */,
-				5E541C951AFA6F8E00345E8B /* ColorWheel.m */,
 				5E541C971AFA6F9700345E8B /* Alert.h */,
 				5E541C981AFA6F9700345E8B /* Alert.m */,
 				5E41454F1B3C8F990069C6BB /* Swift */,
@@ -260,13 +258,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E541C991AFA6F9700345E8B /* Alert.m in Sources */,
+				5E41455F1B3CE62F0069C6BB /* ColorWheel.swift in Sources */,
 				5E93C2361AF91EDF003C2D50 /* ViewController.m in Sources */,
 				5E41454E1B3C64450069C6BB /* RandomGenerator.swift in Sources */,
 				5E93C2331AF91EDF003C2D50 /* AppDelegate.m in Sources */,
 				5E541C931AFA6F7200345E8B /* FactBook.m in Sources */,
 				5E4145511B3C92A10069C6BB /* AlertView.swift in Sources */,
 				5E93C2301AF91EDF003C2D50 /* main.m in Sources */,
-				5E541C961AFA6F8E00345E8B /* ColorWheel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

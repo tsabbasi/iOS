@@ -14,6 +14,7 @@
     // Add spinner
     UIActivityIndicatorView *_spinner;
     bool _networkAvailable;
+    ColorWheel *_colorWheel;
 }
 
 
@@ -38,9 +39,9 @@
     [self.view addSubview:_spinner];
     [_spinner startAnimating];
     
-    self.colorWheel = [[ColorWheel alloc] init];
+    _colorWheel = [[ColorWheel alloc] init];
     
-    UIColor *randomColor = [self.colorWheel getColor];
+    UIColor *randomColor = [_colorWheel getColor];
     self.view.backgroundColor = randomColor;
     self.funFactButton.tintColor = randomColor;
     
@@ -68,7 +69,7 @@
 - (IBAction)showFunFact {
     
     if (_networkAvailable) {
-        UIColor *randomColor = [self.colorWheel getColor];
+        UIColor *randomColor = [_colorWheel getColor];
         self.view.backgroundColor = randomColor;
         self.funFactButton.tintColor = randomColor;
         // Need to randomly generate this, will need an instance variable to hold previous numbers.

@@ -35,7 +35,7 @@ class RandomGenerator: NSObject {
     }
     
     
-    func getRandomObjectFromArray(objectArray: NSMutableArray) -> AnyObject {
+    func getRandomObjectFromArray(objectArray: [UIColor]) -> UIColor {
         
         if (previousRandomNumberArray.count == objectArray.count) {
             previousRandomNumberArray.removeAll(keepCapacity: false)

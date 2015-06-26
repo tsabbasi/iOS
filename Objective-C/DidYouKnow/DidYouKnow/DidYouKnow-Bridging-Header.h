@@ -10,5 +10,4 @@
 // Model
 
 #import "FactBook.h"
-#import "ColorWheel.h"
 #import "Alert.h"
