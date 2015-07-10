@@ -5,9 +5,5 @@
 // Objective-C Files being exposed to swift
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 // Model
-
-#import "FactBook.h"
-#import "Alert.h"

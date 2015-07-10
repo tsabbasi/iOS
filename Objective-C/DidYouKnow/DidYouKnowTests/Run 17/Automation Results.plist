@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>All Samples</key>
+	<array>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().mainWindow().buttons()["Jokes"].tap()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:46:52Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().mainWindow().buttons()["Tell Me More!"].tapWithOptions({tapCount:"151"})</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:46:52Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.captureRectOnScreenWithName("{origin:{x:0.00,y:0.00}, size:{height:667.00,width:375.00}}", UIScreen, "JokesAlert.png")</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:47:24Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Screenshot</string>
+			<key>Message</key>
+			<string>JokesAlert.png</string>
+			<key>Screenshot</key>
+			<string>33A99A62-0490-4793-9E92-970DE8AE4AAA</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:47:24Z</date>
+			<key>Type</key>
+			<integer>8</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().mainWindow().buttons()["Random Facts"].tap()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:47:26Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().mainWindow().buttons()["Tell Me More!"].tapWithOptions({tapCount:"306"})</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:47:26Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.captureRectOnScreenWithName("{origin:{x:0.00,y:0.00}, size:{height:667.00,width:375.00}}", UIScreen, "RandomFactsAlert.png")</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:29Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Screenshot</string>
+			<key>Message</key>
+			<string>RandomFactsAlert.png</string>
+			<key>Screenshot</key>
+			<string>0E2FCA03-9FEB-4481-810D-EFB56CD429F2</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:29Z</date>
+			<key>Type</key>
+			<integer>8</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()["OK"].tap()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:31Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0].tap()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:31Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0].scrollToVisible()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:31Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0] - scrollToVisible cannot be used on the element because it does not have a scrollable ancestor.</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:32Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0] - scrollToVisible cannot be used on the element because it does not have a scrollable ancestor.</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:32Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0] could not be tapped because the element is not visible</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T14:48:32Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

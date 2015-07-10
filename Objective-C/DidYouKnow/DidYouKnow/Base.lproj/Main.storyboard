@@ -1,14 +1,131 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XRa-4e-xPf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Did You Know?-->
+        <scene sceneID="SHa-TM-wxR">
+            <objects>
+                <viewController id="XRa-4e-xPf" customClass="MainViewController" customModule="DidYouKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uQd-4c-ouD"/>
+                        <viewControllerLayoutGuide type="bottom" id="DOw-gS-WGl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ocv-WE-z6i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-AX-7qt">
+                                <rect key="frame" x="48" y="184.5" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Wph-l8-vJt"/>
+                                    <constraint firstAttribute="width" constant="225" id="pQX-5M-wUM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Stem Facts">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8fc-dQ-ZkC"/>
+                                    <segue destination="8Ur-WX-Ng3" kind="modal" id="7Eb-rd-Ts3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-gl-H2g">
+                                <rect key="frame" x="48" y="253.5" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="01K-jX-KSb"/>
+                                    <constraint firstAttribute="width" constant="225" id="yJF-tt-Uot"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Engineering Memes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dUB-Ie-Vou"/>
+                                    <segue destination="bw3-W0-UYW" kind="modal" id="Ahq-Fa-Nv2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojG-pN-xzM">
+                                <rect key="frame" x="48" y="322.5" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="XzU-xM-jbW"/>
+                                    <constraint firstAttribute="height" constant="61" id="rW7-zF-EvJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Jokes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NjH-uF-XmH"/>
+                                    <segue destination="Dnt-Y8-4bD" kind="modal" id="gnT-2A-NSM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbE-vQ-782">
+                                <rect key="frame" x="48" y="391.5" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="5ZL-dI-8Qa"/>
+                                    <constraint firstAttribute="width" constant="225" id="js5-jb-uLr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="My Favorites">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="36M-PE-cMV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xR-1u-LMY">
+                                <rect key="frame" x="48" y="115.5" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="5eK-aC-Bv2"/>
+                                    <constraint firstAttribute="height" constant="61" id="hmd-IF-9Lt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Random Facts">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bHv-Gb-vRt"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="Ytu-aM-qKB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52941176469999995" green="0.74901960779999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GbE-vQ-782" firstAttribute="top" secondItem="ojG-pN-xzM" secondAttribute="bottom" constant="8" id="1Sz-dq-3Gi"/>
+                            <constraint firstItem="hk3-AX-7qt" firstAttribute="top" secondItem="7xR-1u-LMY" secondAttribute="bottom" constant="8" id="4D2-jR-RC9"/>
+                            <constraint firstAttribute="centerX" secondItem="7xR-1u-LMY" secondAttribute="centerX" id="7Oh-mJ-BFq"/>
+                            <constraint firstAttribute="centerY" secondItem="gPM-gl-H2g" secondAttribute="centerY" id="FkV-rs-sP2"/>
+                            <constraint firstAttribute="centerX" secondItem="ojG-pN-xzM" secondAttribute="centerX" id="MR4-dM-xzs"/>
+                            <constraint firstAttribute="centerX" secondItem="gPM-gl-H2g" secondAttribute="centerX" id="Njd-U8-2dn"/>
+                            <constraint firstAttribute="centerX" secondItem="hk3-AX-7qt" secondAttribute="centerX" id="TlM-hp-shr"/>
+                            <constraint firstAttribute="centerX" secondItem="GbE-vQ-782" secondAttribute="centerX" id="dok-IY-Qfs"/>
+                            <constraint firstItem="ojG-pN-xzM" firstAttribute="top" secondItem="gPM-gl-H2g" secondAttribute="bottom" constant="8" id="sBJ-EA-fRS"/>
+                            <constraint firstItem="gPM-gl-H2g" firstAttribute="top" secondItem="hk3-AX-7qt" secondAttribute="bottom" constant="8" id="ts9-Tb-4hC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Did You Know?" id="Yra-UU-UtT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVM-sc-e0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="334"/>
+        </scene>
+        <!--Random Facts-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RandomFactViewController" customModule="DidYouKnow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -24,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2p8-CO-nhG">
-                                <rect key="frame" x="48" y="448" width="225" height="61"/>
+                                <rect key="frame" x="48" y="443" width="225" height="61"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="Ooa-uT-9uF"/>
@@ -35,11 +152,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p9b-AH-u42"/>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gmh-mD-liK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDS-gm-VGX">
-                                <rect key="frame" x="52" y="60" width="116" height="22"/>
+                                <rect key="frame" x="48" y="28" width="116" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="6bd-FU-sQ7"/>
                                     <constraint firstAttribute="width" constant="116" id="j8a-05-7VW"/>
@@ -48,27 +165,366 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-ZP-WL9">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home" id="17e-FV-geD">
+                                        <connections>
+                                            <action selector="goHome:" destination="vXZ-lx-hvc" id="Ufr-0Q-fCf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="e9t-xz-HHO"/>
+                                    <barButtonItem title="Stem" id="7Fn-oM-YxL">
+                                        <connections>
+                                            <segue destination="8Ur-WX-Ng3" kind="modal" id="hEm-tN-ANC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8RX-8E-2hH"/>
+                                    <barButtonItem title="Engineering" id="Cwj-cw-5TF">
+                                        <connections>
+                                            <segue destination="bw3-W0-UYW" kind="modal" id="9lE-le-sE5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kIg-wj-cJf"/>
+                                    <barButtonItem title="Jokes" id="rzw-9p-dpX">
+                                        <connections>
+                                            <segue destination="Dnt-Y8-4bD" kind="modal" id="Soh-z0-VeF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6aF-ZP-WL9" secondAttribute="bottom" id="80A-dj-lg0"/>
                             <constraint firstItem="2p8-CO-nhG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="48" id="Al4-3e-W73"/>
-                            <constraint firstItem="zDS-gm-VGX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="Hmg-yW-95l"/>
+                            <constraint firstAttribute="trailing" secondItem="6aF-ZP-WL9" secondAttribute="trailing" id="Bhw-XP-qxG"/>
+                            <constraint firstItem="zDS-gm-VGX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Hmg-yW-95l"/>
                             <constraint firstAttribute="trailing" secondItem="2p8-CO-nhG" secondAttribute="trailing" constant="47" id="JNJ-na-RFU"/>
-                            <constraint firstItem="zDS-gm-VGX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="36" id="L1V-Lf-trv"/>
+                            <constraint firstItem="zDS-gm-VGX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="32" id="L1V-Lf-trv"/>
+                            <constraint firstItem="6aF-ZP-WL9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="OFE-hZ-teK"/>
                             <constraint firstItem="1Je-GJ-RtR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="32" id="QaS-Aa-Ksc"/>
+                            <constraint firstItem="6aF-ZP-WL9" firstAttribute="top" secondItem="2p8-CO-nhG" secondAttribute="bottom" constant="20" id="VZ8-SA-cjZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Je-GJ-RtR" secondAttribute="trailing" constant="31" id="Xz6-Zm-s5Q"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2p8-CO-nhG" secondAttribute="bottom" constant="59" id="cLh-1V-Ns7"/>
                             <constraint firstAttribute="centerY" secondItem="1Je-GJ-RtR" secondAttribute="centerY" id="usF-fh-kA7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Random Facts" id="X7A-d0-PQj"/>
                     <connections>
-                        <outlet property="funFactButton" destination="2p8-CO-nhG" id="QU4-3b-jD8"/>
-                        <outlet property="funFactLabel" destination="1Je-GJ-RtR" id="o9y-TA-tRo"/>
+                        <outlet property="funFactButton" destination="2p8-CO-nhG" id="6Vm-qa-fK2"/>
+                        <outlet property="funFactLabel" destination="1Je-GJ-RtR" id="Mm5-8O-eCo"/>
+                        <outlet property="toolBar" destination="6aF-ZP-WL9" id="aiR-t8-8MM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="334"/>
+            <point key="canvasLocation" x="887" y="-390"/>
+        </scene>
+        <!--Stem Facts-->
+        <scene sceneID="QXA-Je-dbE">
+            <objects>
+                <viewController id="8Ur-WX-Ng3" customClass="StemFactsViewController" customModule="DidYouKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dnq-lD-SpH"/>
+                        <viewControllerLayoutGuide type="bottom" id="HPf-El-GWx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqG-HE-eU5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An interesting fact goes here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gln-YY-3XO">
+                                <rect key="frame" x="48" y="261.5" width="225" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRW-SR-yFf">
+                                <rect key="frame" x="48" y="433" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="AYh-xe-DCr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tell Me More!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U4J-cB-wZl"/>
+                                    <action selector="showStemFact" destination="8Ur-WX-Ng3" eventType="touchUpInside" id="YWm-Lt-coc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-2r-CGb">
+                                <rect key="frame" x="48" y="28" width="116" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="FBQ-2b-Y6S"/>
+                                    <constraint firstAttribute="height" constant="22" id="T1U-Ki-wjX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-YD-X6D">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home" id="BRb-qy-UF1">
+                                        <connections>
+                                            <action selector="goHome:" destination="8Ur-WX-Ng3" id="yXd-xJ-2mx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ho6-Jb-C7l"/>
+                                    <barButtonItem title="Random" id="P7F-Of-i6h">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="modal" id="phC-7i-zka"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6rh-Kf-USu"/>
+                                    <barButtonItem title="Engineering" id="Gqv-8e-kgC">
+                                        <connections>
+                                            <segue destination="bw3-W0-UYW" kind="modal" id="QXP-GI-UvM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ahx-P4-Jy9"/>
+                                    <barButtonItem title="Jokes" id="pZm-GA-jzd">
+                                        <connections>
+                                            <segue destination="Dnt-Y8-4bD" kind="modal" id="JBU-on-T8p"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ajN-YD-X6D" firstAttribute="top" secondItem="eRW-SR-yFf" secondAttribute="bottom" constant="30" id="5q8-be-hfd"/>
+                            <constraint firstAttribute="centerY" secondItem="Gln-YY-3XO" secondAttribute="centerY" id="8Q1-kc-Iq1"/>
+                            <constraint firstItem="ajN-YD-X6D" firstAttribute="leading" secondItem="eqG-HE-eU5" secondAttribute="leading" id="Cjs-8h-0oU"/>
+                            <constraint firstItem="GQZ-2r-CGb" firstAttribute="top" secondItem="dnq-lD-SpH" secondAttribute="bottom" constant="8" id="LQk-nl-iW9"/>
+                            <constraint firstItem="Gln-YY-3XO" firstAttribute="leading" secondItem="eqG-HE-eU5" secondAttribute="leading" constant="48" id="RhX-UO-RLl"/>
+                            <constraint firstAttribute="trailing" secondItem="ajN-YD-X6D" secondAttribute="trailing" id="Yp2-VJ-QVH"/>
+                            <constraint firstAttribute="trailing" secondItem="eRW-SR-yFf" secondAttribute="trailing" constant="47" id="aVw-cI-Czg"/>
+                            <constraint firstItem="GQZ-2r-CGb" firstAttribute="leading" secondItem="eqG-HE-eU5" secondAttribute="leadingMargin" constant="32" id="gfp-WR-o0O"/>
+                            <constraint firstAttribute="bottom" secondItem="ajN-YD-X6D" secondAttribute="bottom" id="mtA-qH-alY"/>
+                            <constraint firstItem="eRW-SR-yFf" firstAttribute="leading" secondItem="eqG-HE-eU5" secondAttribute="leading" constant="48" id="qOb-Bd-pcT"/>
+                            <constraint firstAttribute="trailing" secondItem="Gln-YY-3XO" secondAttribute="trailing" constant="47" id="v6z-no-k1P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stem Facts" id="PdR-lT-RDu"/>
+                    <connections>
+                        <outlet property="stemFactButton" destination="eRW-SR-yFf" id="AG0-SZ-DDN"/>
+                        <outlet property="stemFactLabel" destination="Gln-YY-3XO" id="MDB-cw-Qu0"/>
+                        <outlet property="toolBar" destination="ajN-YD-X6D" id="Idq-cD-aXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjM-WF-Uct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="334"/>
+        </scene>
+        <!--Engineering Memes View Controller-->
+        <scene sceneID="gFf-Aa-qBc">
+            <objects>
+                <viewController id="bw3-W0-UYW" customClass="EngineeringMemesViewController" customModule="DidYouKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WgE-Do-1LR"/>
+                        <viewControllerLayoutGuide type="bottom" id="xiC-KI-FOa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xb4-B9-J5H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An interesting fact goes here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-tN-f67">
+                                <rect key="frame" x="48" y="262" width="225" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUi-8N-uyM">
+                                <rect key="frame" x="48" y="433" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="57r-2I-wDz"/>
+                                    <constraint firstAttribute="width" constant="225" id="qQI-27-U2K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tell Me More!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showEngineeringMeme" destination="bw3-W0-UYW" eventType="touchUpInside" id="Fee-R1-Iaa"/>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lWo-kj-13G"/>
+                                    <action selector="showStemFact" destination="8Ur-WX-Ng3" eventType="touchUpInside" id="Rrl-8w-4bm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-7K-lhS">
+                                <rect key="frame" x="48" y="28" width="116" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="6Hp-Va-hc1"/>
+                                    <constraint firstAttribute="width" constant="116" id="qCB-gw-3g6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZo-6f-Gdg">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home" id="YDj-XV-BT1">
+                                        <connections>
+                                            <action selector="goHome:" destination="bw3-W0-UYW" id="kbd-mG-qBn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Yq-9s-nnV"/>
+                                    <barButtonItem title="Random" id="1ie-lX-MNa">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="modal" id="yI6-aq-ylI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pOt-Ij-n9N"/>
+                                    <barButtonItem title="Stem" id="G7L-Gs-Www">
+                                        <connections>
+                                            <segue destination="8Ur-WX-Ng3" kind="modal" id="UUC-Ji-HrT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Mc-S3-bT4"/>
+                                    <barButtonItem title="Jokes" id="p17-EM-YUa">
+                                        <connections>
+                                            <segue destination="Dnt-Y8-4bD" kind="modal" id="aBk-Ue-wwW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lZo-6f-Gdg" firstAttribute="leading" secondItem="xb4-B9-J5H" secondAttribute="leading" id="2iy-LZ-nAk"/>
+                            <constraint firstAttribute="trailing" secondItem="CeR-tN-f67" secondAttribute="trailing" constant="47" id="2zs-OA-f0E"/>
+                            <constraint firstAttribute="centerY" secondItem="CeR-tN-f67" secondAttribute="centerY" id="5PZ-jO-3bd"/>
+                            <constraint firstItem="GmS-7K-lhS" firstAttribute="top" secondItem="WgE-Do-1LR" secondAttribute="bottom" constant="8" id="5T9-ZU-HgD"/>
+                            <constraint firstItem="xiC-KI-FOa" firstAttribute="top" secondItem="lZo-6f-Gdg" secondAttribute="bottom" id="79v-Xu-4yv"/>
+                            <constraint firstItem="lZo-6f-Gdg" firstAttribute="top" secondItem="pUi-8N-uyM" secondAttribute="bottom" constant="30" id="AJo-r8-Qwv"/>
+                            <constraint firstAttribute="trailing" secondItem="lZo-6f-Gdg" secondAttribute="trailing" id="FmU-bb-XOK"/>
+                            <constraint firstAttribute="trailing" secondItem="pUi-8N-uyM" secondAttribute="trailing" constant="47" id="WGW-t3-eEF"/>
+                            <constraint firstItem="GmS-7K-lhS" firstAttribute="leading" secondItem="xb4-B9-J5H" secondAttribute="leading" constant="48" id="och-Mz-NlM"/>
+                            <constraint firstItem="pUi-8N-uyM" firstAttribute="leading" secondItem="xb4-B9-J5H" secondAttribute="leading" constant="48" id="xgm-Q2-U0P"/>
+                            <constraint firstItem="CeR-tN-f67" firstAttribute="leading" secondItem="xb4-B9-J5H" secondAttribute="leading" constant="48" id="z2K-s3-XnQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TKp-bb-YFh"/>
+                    <connections>
+                        <outlet property="engineeringMemeButton" destination="pUi-8N-uyM" id="05C-sB-Nx8"/>
+                        <outlet property="engineeringMemeLabel" destination="CeR-tN-f67" id="MLL-vE-np0"/>
+                        <outlet property="toolBar" destination="lZo-6f-Gdg" id="Bey-ae-tBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbT-xR-Apn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="1033"/>
+        </scene>
+        <!--Jokes View Controller-->
+        <scene sceneID="cgl-jT-Euj">
+            <objects>
+                <viewController id="Dnt-Y8-4bD" customClass="JokesViewController" customModule="DidYouKnow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4nL-qY-gKz"/>
+                        <viewControllerLayoutGuide type="bottom" id="rc1-3I-597"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cyx-6f-0Xj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An interesting fact goes here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYq-mC-4iQ">
+                                <rect key="frame" x="47" y="262" width="225" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaL-Xc-HfG">
+                                <rect key="frame" x="47" y="433" width="225" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="JiB-KL-NuS"/>
+                                    <constraint firstAttribute="width" constant="225" id="Ouv-ne-tjS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.43137254899999999" green="0.74509803919999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tell Me More!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showEngineeringMeme" destination="bw3-W0-UYW" eventType="touchUpInside" id="GBN-xQ-fkJ"/>
+                                    <action selector="showFunFact" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sr5-qf-SU7"/>
+                                    <action selector="showJoke" destination="Dnt-Y8-4bD" eventType="touchUpInside" id="tLi-2N-Tw7"/>
+                                    <action selector="showStemFact" destination="8Ur-WX-Ng3" eventType="touchUpInside" id="xdX-YK-cYx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psm-gb-PgO">
+                                <rect key="frame" x="48" y="28" width="116" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="MGo-xO-OV9"/>
+                                    <constraint firstAttribute="width" constant="116" id="mEs-s7-SML"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jz1-Q0-UYv">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home" id="iKq-0f-aoh">
+                                        <connections>
+                                            <action selector="goHome:" destination="Dnt-Y8-4bD" id="sV4-7Z-LS1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FGr-VV-EsW"/>
+                                    <barButtonItem title="Random" id="fMG-Hj-MpV">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="modal" id="LRg-U0-92d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ziQ-6i-aB4"/>
+                                    <barButtonItem title="Stem" id="HgV-2d-llC">
+                                        <connections>
+                                            <segue destination="8Ur-WX-Ng3" kind="modal" id="KTW-zt-aDg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ot7-f2-Fem"/>
+                                    <barButtonItem title="Engineering" id="xQx-ED-WqM">
+                                        <connections>
+                                            <segue destination="bw3-W0-UYW" kind="modal" id="Jzq-Se-P7d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="LaL-Xc-HfG" secondAttribute="centerX" id="FZm-GY-NQs"/>
+                            <constraint firstItem="jz1-Q0-UYv" firstAttribute="leading" secondItem="Cyx-6f-0Xj" secondAttribute="leading" id="Ji9-FW-GRw"/>
+                            <constraint firstAttribute="centerY" secondItem="fYq-mC-4iQ" secondAttribute="centerY" id="KU1-qT-pxO"/>
+                            <constraint firstAttribute="trailing" secondItem="jz1-Q0-UYv" secondAttribute="trailing" id="T1i-eD-MN1"/>
+                            <constraint firstItem="rc1-3I-597" firstAttribute="top" secondItem="jz1-Q0-UYv" secondAttribute="bottom" id="Voq-px-62G"/>
+                            <constraint firstItem="psm-gb-PgO" firstAttribute="top" secondItem="4nL-qY-gKz" secondAttribute="bottom" constant="8" id="nFi-A7-gHF"/>
+                            <constraint firstItem="jz1-Q0-UYv" firstAttribute="top" secondItem="LaL-Xc-HfG" secondAttribute="bottom" constant="30" id="rny-eh-OsC"/>
+                            <constraint firstAttribute="trailing" secondItem="fYq-mC-4iQ" secondAttribute="trailing" constant="48" id="uWg-tx-aF3"/>
+                            <constraint firstItem="psm-gb-PgO" firstAttribute="leading" secondItem="Cyx-6f-0Xj" secondAttribute="leading" constant="48" id="wMG-4m-WMj"/>
+                            <constraint firstItem="fYq-mC-4iQ" firstAttribute="leading" secondItem="Cyx-6f-0Xj" secondAttribute="leading" constant="47" id="xyK-rL-aEO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="jokesButton" destination="LaL-Xc-HfG" id="9t1-s4-YtI"/>
+                        <outlet property="jokesLabel" destination="fYq-mC-4iQ" id="yGk-yf-nrh"/>
+                        <outlet property="toolBar" destination="jz1-Q0-UYv" id="23a-Aa-ShY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HH9-Da-OtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="1691"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -76,4 +532,10 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ytu-aM-qKB"/>
+        <segue reference="Ahq-Fa-Nv2"/>
+        <segue reference="gnT-2A-NSM"/>
+        <segue reference="7Eb-rd-Ts3"/>
+    </inferredMetricsTieBreakers>
 </document>

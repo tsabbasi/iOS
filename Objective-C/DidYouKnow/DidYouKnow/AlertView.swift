@@ -15,7 +15,13 @@ class AlertView: UIAlertView {
         
         var alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
         
-        var okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        var okButton = UIAlertAction(title: "OK", style: .Default) { (_) -> Void in
+        
+            let topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+            
+            topViewController?.dismissViewControllerAnimated(true, completion: nil)
+        
+        }
         
         alertController.addAction(okButton)
         

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>All Samples</key>
+	<array>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().mainWindow().buttons()["Engineering Memes"].tap()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:15Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().mainWindow().buttons()["Tell Me More!"].tapWithOptions({tapCount:"51"})</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:16Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.captureRectOnScreenWithName("{origin:{x:0.00,y:0.00}, size:{height:667.00,width:375.00}}", UIScreen, "EngineeringMemesAlert.png")</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:27Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Screenshot</string>
+			<key>Message</key>
+			<string>EngineeringMemesAlert.png</string>
+			<key>Screenshot</key>
+			<string>CA4FAAC4-B0D1-45F7-84B3-479D7933A2CB</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:27Z</date>
+			<key>Type</key>
+			<integer>8</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0].tap()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:28Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0].scrollToVisible()</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:28Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0] - scrollToVisible cannot be used on the element because it does not have a scrollable ancestor.</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:28Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0] - scrollToVisible cannot be used on the element because it does not have a scrollable ancestor.</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:28Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>target.frontMostApp().alert().buttons()[0] could not be tapped because the element is not visible</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:28Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>Cannot perform action on invalid element: UIAElementNil from target.frontMostApp().toolbar().buttons()["Home"]</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:37Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>DidYouKnowAlertTests</string>
+			<key>Line</key>
+			<integer>10</integer>
+			<key>LogType</key>
+			<string>Error</string>
+			<key>Message</key>
+			<string>Script threw an uncaught JavaScript error: Cannot perform action on invalid element: UIAElementNil from target.frontMostApp().toolbar().buttons()["Home"] on line 10 of DidYouKnowAlertTests</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:37Z</date>
+			<key>Type</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Stopped</string>
+			<key>Message</key>
+			<string>Script was stopped by the user</string>
+			<key>Timestamp</key>
+			<date>2015-07-09T13:11:37Z</date>
+			<key>Type</key>
+			<integer>9</integer>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
