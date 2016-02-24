@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meet_A_Muslim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="qhG-qb-YzF" kind="show" identifier="signUpSegue" id="0KT-sN-Ygb"/>
+                        <segue destination="M32-XR-n8D" kind="show" identifier="logInSegue" id="bbx-q2-wx5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Swiping View Controller-->
+        <scene sceneID="DQg-ls-DdJ">
+            <objects>
+                <viewController id="M32-XR-n8D" customClass="SwipingViewController" customModule="Meet_A_Muslim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vtt-m8-vy4"/>
+                        <viewControllerLayoutGuide type="bottom" id="gex-C3-u5C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NiV-eV-DOf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6E-pp-PKJ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dav-en-AMS"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Meet A Muslim" id="BLi-cI-wig">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="tAE-bV-jgR">
+                                            <connections>
+                                                <action selector="logOut:" destination="M32-XR-n8D" id="y2d-y2-piv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="o5F-2i-P7t">
+                                            <connections>
+                                                <segue destination="Brl-CM-HsG" kind="show" identifier="viewContactsSegue" id="MqL-L7-dqP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minion-muslim" translatesAutoresizingMaskIntoConstraints="NO" id="8GB-Xp-PAE">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="3Be-7A-Iml"/>
+                                    <constraint firstAttribute="width" constant="300" id="Lgz-Fz-YDw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to reject, right to accept" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IGe-SI-1qK">
+                                <rect key="frame" x="169.5" y="470" width="261.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G6E-pp-PKJ" firstAttribute="top" secondItem="vtt-m8-vy4" secondAttribute="bottom" id="NAW-gq-5eK"/>
+                            <constraint firstItem="IGe-SI-1qK" firstAttribute="top" secondItem="8GB-Xp-PAE" secondAttribute="bottom" constant="20" id="TL0-j0-R82"/>
+                            <constraint firstItem="G6E-pp-PKJ" firstAttribute="leading" secondItem="NiV-eV-DOf" secondAttribute="leading" id="UVR-0T-ddz"/>
+                            <constraint firstItem="IGe-SI-1qK" firstAttribute="centerX" secondItem="NiV-eV-DOf" secondAttribute="centerX" id="ZND-4r-dRq"/>
+                            <constraint firstItem="8GB-Xp-PAE" firstAttribute="centerX" secondItem="NiV-eV-DOf" secondAttribute="centerX" id="dsc-VL-2LB"/>
+                            <constraint firstAttribute="trailing" secondItem="G6E-pp-PKJ" secondAttribute="trailing" id="jYx-qM-Vn9"/>
+                            <constraint firstItem="8GB-Xp-PAE" firstAttribute="centerY" secondItem="NiV-eV-DOf" secondAttribute="centerY" id="xbh-dQ-0go"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="G6E-pp-PKJ" id="6zg-cb-g8q"/>
+                        <outlet property="swipeLabel" destination="IGe-SI-1qK" id="ray-T7-JyS"/>
+                        <outlet property="userImage" destination="8GB-Xp-PAE" id="ap8-Uz-dUe"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="z68-n4-z5S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBI-gX-dI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="-464"/>
+        </scene>
+        <!--Connections Table View Controller-->
+        <scene sceneID="LxV-mF-NNO">
+            <objects>
+                <viewController id="Brl-CM-HsG" customClass="ConnectionsTableViewController" customModule="Meet_A_Muslim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yl7-ok-D7x"/>
+                        <viewControllerLayoutGuide type="bottom" id="sdu-SC-tTn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Fv-pR-30T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vob-RG-pxD">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2Tn-rk-7VV"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Your Connections" id="Ncl-j4-0un">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="DLe-HL-X7w">
+                                            <connections>
+                                                <segue destination="M32-XR-n8D" kind="show" identifier="backToSwipingVCSegue" id="tBC-QK-vcy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WFr-5o-Z6r">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="3MZ-0g-Zo6">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3MZ-0g-Zo6" id="n22-Wq-aEX">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Brl-CM-HsG" id="huz-bS-ytw"/>
+                                    <outlet property="delegate" destination="Brl-CM-HsG" id="CHG-qB-ouo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vob-RG-pxD" secondAttribute="trailing" id="MMt-Ca-xah"/>
+                            <constraint firstItem="vob-RG-pxD" firstAttribute="leading" secondItem="0Fv-pR-30T" secondAttribute="leading" id="NU7-I9-uxG"/>
+                            <constraint firstItem="WFr-5o-Z6r" firstAttribute="top" secondItem="vob-RG-pxD" secondAttribute="bottom" id="UB2-7R-ORa"/>
+                            <constraint firstItem="vob-RG-pxD" firstAttribute="top" secondItem="Yl7-ok-D7x" secondAttribute="bottom" id="UKG-Vc-4P4"/>
+                            <constraint firstItem="sdu-SC-tTn" firstAttribute="top" secondItem="WFr-5o-Z6r" secondAttribute="bottom" id="fsD-dd-ogV"/>
+                            <constraint firstAttribute="trailing" secondItem="WFr-5o-Z6r" secondAttribute="trailing" id="gKT-5n-V1a"/>
+                            <constraint firstItem="WFr-5o-Z6r" firstAttribute="leading" secondItem="0Fv-pR-30T" secondAttribute="leading" id="rHd-uS-Hzg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WFr-5o-Z6r" id="9yp-Oj-T8y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Bd-1Z-AdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="-464"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="E29-Lz-xXq">
+            <objects>
+                <viewController id="qhG-qb-YzF" customClass="SignUpViewController" customModule="Meet_A_Muslim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y8k-dJ-T2A"/>
+                        <viewControllerLayoutGuide type="bottom" id="v5U-fG-Ggq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jf8-lH-K9w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMR-Sj-dUG">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gTA-36-swf"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Meet A Muslim" id="SyC-gb-9iA">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="JRR-s6-n9H">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="r9g-EJ-YRC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vgb-Hl-7zZ">
+                                <rect key="frame" x="247" y="84" width="106" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="9M8-yD-MYh"/>
+                                    <constraint firstAttribute="height" constant="36" id="FN1-PB-Q7X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minion-muslim" translatesAutoresizingMaskIntoConstraints="NO" id="i6k-qe-ZiH">
+                                <rect key="frame" x="200" y="150" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="MQq-cx-cWY"/>
+                                    <constraint firstAttribute="height" constant="200" id="wHJ-0a-N1l"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-8m-bg1">
+                                <rect key="frame" x="276" y="409" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="2nY-de-CKU"/>
+                                    <constraint firstAttribute="height" constant="31" id="dni-WN-xu7"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show the World Real Muslims" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="i8c-1j-95a">
+                                <rect key="frame" x="150" y="399" width="115" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="Nxo-RG-3Fd"/>
+                                    <constraint firstAttribute="height" constant="50" id="g2M-Rc-ASR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would like to..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="6So-ZE-afr">
+                                <rect key="frame" x="231" y="360" width="138" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="7oQ-5B-5G6"/>
+                                    <constraint firstAttribute="width" constant="138" id="KBE-PE-PID"/>
+                                    <constraint firstAttribute="width" constant="114" id="b8J-Xt-UA6"/>
+                                    <constraint firstAttribute="height" constant="30" id="w1Y-rq-2c4"/>
+                                    <constraint firstAttribute="height" constant="24" id="ySw-cr-FnY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7oQ-5B-5G6"/>
+                                        <exclude reference="b8J-Xt-UA6"/>
+                                        <exclude reference="w1Y-rq-2c4"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet A Muslim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="voS-DT-1qg">
+                                <rect key="frame" x="335" y="399" width="115" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="cxH-6R-Zom"/>
+                                    <constraint firstAttribute="height" constant="50" id="fZr-el-h24"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signUp" translatesAutoresizingMaskIntoConstraints="NO" id="L89-mC-ZdU">
+                                <rect key="frame" x="238" y="460" width="124" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="DC6-eg-Lh0"/>
+                                    <constraint firstAttribute="width" constant="124" id="uSv-MH-tNH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vgb-Hl-7zZ" firstAttribute="centerX" secondItem="Jf8-lH-K9w" secondAttribute="centerX" id="0lj-xS-gdl"/>
+                            <constraint firstItem="L89-mC-ZdU" firstAttribute="top" secondItem="Mgi-8m-bg1" secondAttribute="bottom" constant="20" id="3Af-qq-kIn"/>
+                            <constraint firstItem="Mgi-8m-bg1" firstAttribute="leading" secondItem="i8c-1j-95a" secondAttribute="trailing" constant="11" id="3yu-DZ-U0P"/>
+                            <constraint firstItem="Mgi-8m-bg1" firstAttribute="centerX" secondItem="Jf8-lH-K9w" secondAttribute="centerX" id="5QA-31-Jy4"/>
+                            <constraint firstItem="vgb-Hl-7zZ" firstAttribute="top" secondItem="cMR-Sj-dUG" secondAttribute="bottom" constant="20" id="EgL-MY-a0F"/>
+                            <constraint firstAttribute="trailing" secondItem="cMR-Sj-dUG" secondAttribute="trailing" id="FKg-Uf-vrX"/>
+                            <constraint firstItem="Mgi-8m-bg1" firstAttribute="top" secondItem="6So-ZE-afr" secondAttribute="bottom" constant="25" id="JSj-Ok-sxm"/>
+                            <constraint firstItem="6So-ZE-afr" firstAttribute="centerX" secondItem="Jf8-lH-K9w" secondAttribute="centerX" id="Jge-qK-CFF"/>
+                            <constraint firstItem="i8c-1j-95a" firstAttribute="top" secondItem="6So-ZE-afr" secondAttribute="bottom" constant="15" id="Loy-9l-hWT"/>
+                            <constraint firstItem="v5U-fG-Ggq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Mgi-8m-bg1" secondAttribute="bottom" constant="30" id="SSj-Pq-nLU"/>
+                            <constraint firstItem="v5U-fG-Ggq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L89-mC-ZdU" secondAttribute="bottom" constant="30" id="TGI-mm-wSk"/>
+                            <constraint firstItem="voS-DT-1qg" firstAttribute="leading" secondItem="Mgi-8m-bg1" secondAttribute="trailing" constant="12" id="X0f-Ec-dWx"/>
+                            <constraint firstItem="i6k-qe-ZiH" firstAttribute="top" secondItem="vgb-Hl-7zZ" secondAttribute="bottom" constant="116" id="XMA-n4-sI2"/>
+                            <constraint firstItem="voS-DT-1qg" firstAttribute="leading" secondItem="Mgi-8m-bg1" secondAttribute="trailing" constant="10" id="Yg0-EX-j2N"/>
+                            <constraint firstItem="6So-ZE-afr" firstAttribute="top" secondItem="i6k-qe-ZiH" secondAttribute="bottom" constant="10" id="a00-wf-l7K"/>
+                            <constraint firstItem="i6k-qe-ZiH" firstAttribute="centerY" secondItem="Jf8-lH-K9w" secondAttribute="centerY" id="any-z1-Pza"/>
+                            <constraint firstItem="vgb-Hl-7zZ" firstAttribute="top" secondItem="cMR-Sj-dUG" secondAttribute="bottom" constant="20" id="cGj-c5-Q21"/>
+                            <constraint firstItem="i6k-qe-ZiH" firstAttribute="centerX" secondItem="Jf8-lH-K9w" secondAttribute="centerX" id="g2m-yr-I9L"/>
+                            <constraint firstItem="i6k-qe-ZiH" firstAttribute="top" secondItem="vgb-Hl-7zZ" secondAttribute="bottom" constant="30" id="hro-Pk-b6G"/>
+                            <constraint firstItem="cMR-Sj-dUG" firstAttribute="leading" secondItem="Jf8-lH-K9w" secondAttribute="leading" id="q9D-LU-6B9"/>
+                            <constraint firstItem="cMR-Sj-dUG" firstAttribute="top" secondItem="y8k-dJ-T2A" secondAttribute="bottom" id="szA-1L-w2C"/>
+                            <constraint firstItem="L89-mC-ZdU" firstAttribute="centerX" secondItem="Jf8-lH-K9w" secondAttribute="centerX" id="tMT-kR-bJQ"/>
+                            <constraint firstItem="Mgi-8m-bg1" firstAttribute="leading" secondItem="i8c-1j-95a" secondAttribute="trailing" constant="10" id="wPF-BO-8pf"/>
+                            <constraint firstItem="voS-DT-1qg" firstAttribute="top" secondItem="6So-ZE-afr" secondAttribute="bottom" constant="15" id="zYB-Xg-1P7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="XMA-n4-sI2"/>
+                                <exclude reference="any-z1-Pza"/>
+                                <exclude reference="EgL-MY-a0F"/>
+                                <exclude reference="wPF-BO-8pf"/>
+                                <exclude reference="X0f-Ec-dWx"/>
+                                <exclude reference="SSj-Pq-nLU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="meetAMuslim" destination="Mgi-8m-bg1" id="VD1-Ah-zoc"/>
+                        <outlet property="signUpButton" destination="L89-mC-ZdU" id="uu4-h8-xp7"/>
+                        <outlet property="userImage" destination="i6k-qe-ZiH" id="OcV-hu-RAe"/>
+                        <segue destination="M32-XR-n8D" kind="show" identifier="signUpCompleteSegue" id="mC7-ap-1OD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9M-z1-WMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="250"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minion-muslim" width="742" height="997"/>
+        <image name="signUp" width="241" height="145"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tBC-QK-vcy"/>
+        <segue reference="z68-n4-z5S"/>
+    </inferredMetricsTieBreakers>
+</document>

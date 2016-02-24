@@ -11,11 +11,11 @@ import Foundation
 @objc
 class AlertView: UIAlertView {
     
-    func alert(#alertTitle: String, alertMessage: String) -> UIAlertController {
+    func alert(alertTitle alertTitle: String, alertMessage: String) -> UIAlertController {
         
-        var alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
         
-        var okButton = UIAlertAction(title: "OK", style: .Default) { (_) -> Void in
+        let okButton = UIAlertAction(title: "OK", style: .Default) { (_) -> Void in
         
             let topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
             
@@ -30,13 +30,13 @@ class AlertView: UIAlertView {
     }
     
     
-    func settingsAlert(#alertTitle: String, alertMessage: String) -> UIAlertController {
+    func settingsAlert(alertTitle alertTitle: String, alertMessage: String) -> UIAlertController {
         
-        var alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
         
-        var okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
         
-        var settingsButton = UIAlertAction(title: "Settings", style: .Default) { (_) -> Void in
+        let settingsButton = UIAlertAction(title: "Settings", style: .Default) { (_) -> Void in
             let settingsUrl = NSURL(string: UIApplicationOpenSettingsURLString)
             if let url = settingsUrl {
                 UIApplication.sharedApplication().openURL(url)

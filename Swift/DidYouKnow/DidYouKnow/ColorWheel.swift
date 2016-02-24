@@ -21,8 +21,8 @@ struct ColorWheel {
     ]
     
     func randomColor() -> UIColor {
-        var unsignedArrayCount = UInt32(colorsArray.count)
-        var randomNumber = Int(arc4random_uniform(unsignedArrayCount))
+        let unsignedArrayCount = UInt32(colorsArray.count)
+        let randomNumber = Int(arc4random_uniform(unsignedArrayCount))
         
         return colorsArray[randomNumber]
     }

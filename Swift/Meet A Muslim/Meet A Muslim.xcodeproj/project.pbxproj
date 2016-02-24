@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E06B8B91C5B4556004103E2 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E06B8B81C5B4556004103E2 /* libstdc++.tbd */; };
+		5E5C360E1C5C785A009FC682 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C360C1C5C785A009FC682 /* FBSDKMessengerShareKit.framework */; };
+		5E5C360F1C5C785A009FC682 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5C360D1C5C785A009FC682 /* FBSDKShareKit.framework */; };
+		5E844B0C1C57FB960094AD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E844B0B1C57FB960094AD13 /* AppDelegate.swift */; };
+		5E844B0E1C57FB960094AD13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E844B0D1C57FB960094AD13 /* ViewController.swift */; };
+		5E844B111C57FB960094AD13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E844B0F1C57FB960094AD13 /* Main.storyboard */; };
+		5E844B131C57FB960094AD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E844B121C57FB960094AD13 /* Assets.xcassets */; };
+		5EC098881C581D8D00ED633B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC098871C581D8D00ED633B /* Launch Screen.storyboard */; };
+		5EC0988B1C58342800ED633B /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC0988A1C58342800ED633B /* Toast.swift */; };
+		5EC0988E1C58699900ED633B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC0988D1C58699900ED633B /* SignUpViewController.swift */; };
+		5EC098B01C58A6D700ED633B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098A91C58A6D700ED633B /* Bolts.framework */; };
+		5EC098B11C58A6D700ED633B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098AA1C58A6D700ED633B /* FBSDKCoreKit.framework */; };
+		5EC098B21C58A6D700ED633B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098AB1C58A6D700ED633B /* FBSDKLoginKit.framework */; };
+		5EC098B31C58A6D700ED633B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098AC1C58A6D700ED633B /* Parse.framework */; };
+		5EC098B41C58A6D700ED633B /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098AD1C58A6D700ED633B /* ParseCrashReporting.framework */; };
+		5EC098B51C58A6D700ED633B /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098AE1C58A6D700ED633B /* ParseFacebookUtilsV4.framework */; };
+		5EC098B61C58A6D700ED633B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098AF1C58A6D700ED633B /* ParseUI.framework */; };
+		5EC098B81C58A7A400ED633B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098B71C58A7A400ED633B /* SystemConfiguration.framework */; };
+		5EC098BA1C58A7BB00ED633B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098B91C58A7BA00ED633B /* AudioToolbox.framework */; };
+		5EC098BE1C58A7DD00ED633B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC098BD1C58A7DD00ED633B /* libsqlite3.tbd */; };
+		5EC441261C58B97F00620CA8 /* SwipingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC441251C58B97F00620CA8 /* SwipingViewController.swift */; };
+		5EE298B91C5AA69F006237EF /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE298B81C5AA69F006237EF /* ConnectionsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5E06B8B81C5B4556004103E2 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		5E5C360C1C5C785A009FC682 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		5E5C360D1C5C785A009FC682 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		5E844B081C57FB960094AD13 /* Meet A Muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet A Muslim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E844B0B1C57FB960094AD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E844B0D1C57FB960094AD13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E844B101C57FB960094AD13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E844B121C57FB960094AD13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E844B171C57FB960094AD13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EC098871C581D8D00ED633B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5EC0988A1C58342800ED633B /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		5EC0988D1C58699900ED633B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5EC098A51C58A3E700ED633B /* Meet A Muslim-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meet A Muslim-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		5EC098A91C58A6D700ED633B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		5EC098AA1C58A6D700ED633B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5EC098AB1C58A6D700ED633B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5EC098AC1C58A6D700ED633B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		5EC098AD1C58A6D700ED633B /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		5EC098AE1C58A6D700ED633B /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		5EC098AF1C58A6D700ED633B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		5EC098B71C58A7A400ED633B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5EC098B91C58A7BA00ED633B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5EC098BD1C58A7DD00ED633B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5EC441251C58B97F00620CA8 /* SwipingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingViewController.swift; sourceTree = "<group>"; };
+		5EE298B81C5AA69F006237EF /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E844B051C57FB960094AD13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E06B8B91C5B4556004103E2 /* libstdc++.tbd in Frameworks */,
+				5EC098BE1C58A7DD00ED633B /* libsqlite3.tbd in Frameworks */,
+				5EC098BA1C58A7BB00ED633B /* AudioToolbox.framework in Frameworks */,
+				5EC098B81C58A7A400ED633B /* SystemConfiguration.framework in Frameworks */,
+				5E5C360F1C5C785A009FC682 /* FBSDKShareKit.framework in Frameworks */,
+				5E5C360E1C5C785A009FC682 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				5EC098B01C58A6D700ED633B /* Bolts.framework in Frameworks */,
+				5EC098B41C58A6D700ED633B /* ParseCrashReporting.framework in Frameworks */,
+				5EC098B61C58A6D700ED633B /* ParseUI.framework in Frameworks */,
+				5EC098B51C58A6D700ED633B /* ParseFacebookUtilsV4.framework in Frameworks */,
+				5EC098B11C58A6D700ED633B /* FBSDKCoreKit.framework in Frameworks */,
+				5EC098B31C58A6D700ED633B /* Parse.framework in Frameworks */,
+				5EC098B21C58A6D700ED633B /* FBSDKLoginKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E844AFF1C57FB960094AD13 = {
+			isa = PBXGroup;
+			children = (
+				5E844B0A1C57FB960094AD13 /* Meet A Muslim */,
+				5E844B091C57FB960094AD13 /* Products */,
+				5E844B1D1C57FBB00094AD13 /* Framework */,
+			);
+			sourceTree = "<group>";
+		};
+		5E844B091C57FB960094AD13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E844B081C57FB960094AD13 /* Meet A Muslim.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E844B0A1C57FB960094AD13 /* Meet A Muslim */ = {
+			isa = PBXGroup;
+			children = (
+				5EE298BA1C5AA6D7006237EF /* Controller */,
+				5EC0988C1C58343D00ED633B /* View */,
+				5EC098891C58341900ED633B /* Model */,
+				5E844B121C57FB960094AD13 /* Assets.xcassets */,
+				5EC098861C5814C900ED633B /* Supporting Files */,
+			);
+			path = "Meet A Muslim";
+			sourceTree = "<group>";
+		};
+		5E844B1D1C57FBB00094AD13 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				5EC098BD1C58A7DD00ED633B /* libsqlite3.tbd */,
+				5E06B8B81C5B4556004103E2 /* libstdc++.tbd */,
+				5E5C360C1C5C785A009FC682 /* FBSDKMessengerShareKit.framework */,
+				5E5C360D1C5C785A009FC682 /* FBSDKShareKit.framework */,
+				5EC098B91C58A7BA00ED633B /* AudioToolbox.framework */,
+				5EC098B71C58A7A400ED633B /* SystemConfiguration.framework */,
+				5EC098A91C58A6D700ED633B /* Bolts.framework */,
+				5EC098AA1C58A6D700ED633B /* FBSDKCoreKit.framework */,
+				5EC098AB1C58A6D700ED633B /* FBSDKLoginKit.framework */,
+				5EC098AC1C58A6D700ED633B /* Parse.framework */,
+				5EC098AD1C58A6D700ED633B /* ParseCrashReporting.framework */,
+				5EC098AE1C58A6D700ED633B /* ParseFacebookUtilsV4.framework */,
+				5EC098AF1C58A6D700ED633B /* ParseUI.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		5EC098861C5814C900ED633B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EC098A51C58A3E700ED633B /* Meet A Muslim-Bridging-Header.h */,
+				5E844B171C57FB960094AD13 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EC098891C58341900ED633B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E844B0B1C57FB960094AD13 /* AppDelegate.swift */,
+				5EC0988A1C58342800ED633B /* Toast.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5EC0988C1C58343D00ED633B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E844B0F1C57FB960094AD13 /* Main.storyboard */,
+				5EC098871C581D8D00ED633B /* Launch Screen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5EE298BA1C5AA6D7006237EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E844B0D1C57FB960094AD13 /* ViewController.swift */,
+				5EC0988D1C58699900ED633B /* SignUpViewController.swift */,
+				5EC441251C58B97F00620CA8 /* SwipingViewController.swift */,
+				5EE298B81C5AA69F006237EF /* ConnectionsTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E844B071C57FB960094AD13 /* Meet A Muslim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E844B1A1C57FB960094AD13 /* Build configuration list for PBXNativeTarget "Meet A Muslim" */;
+			buildPhases = (
+				5E844B041C57FB960094AD13 /* Sources */,
+				5E844B051C57FB960094AD13 /* Frameworks */,
+				5E844B061C57FB960094AD13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Meet A Muslim";
+			productName = "Meet A Muslim";
+			productReference = 5E844B081C57FB960094AD13 /* Meet A Muslim.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E844B001C57FB960094AD13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = TahaAbbasi;
+				TargetAttributes = {
+					5E844B071C57FB960094AD13 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BDVAQUWX8W;
+					};
+				};
+			};
+			buildConfigurationList = 5E844B031C57FB960094AD13 /* Build configuration list for PBXProject "Meet A Muslim" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E844AFF1C57FB960094AD13;
+			productRefGroup = 5E844B091C57FB960094AD13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E844B071C57FB960094AD13 /* Meet A Muslim */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E844B061C57FB960094AD13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC098881C581D8D00ED633B /* Launch Screen.storyboard in Resources */,
+				5E844B131C57FB960094AD13 /* Assets.xcassets in Resources */,
+				5E844B111C57FB960094AD13 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E844B041C57FB960094AD13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E844B0E1C57FB960094AD13 /* ViewController.swift in Sources */,
+				5EC0988B1C58342800ED633B /* Toast.swift in Sources */,
+				5EC0988E1C58699900ED633B /* SignUpViewController.swift in Sources */,
+				5EC441261C58B97F00620CA8 /* SwipingViewController.swift in Sources */,
+				5E844B0C1C57FB960094AD13 /* AppDelegate.swift in Sources */,
+				5EE298B91C5AA69F006237EF /* ConnectionsTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5E844B0F1C57FB960094AD13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E844B101C57FB960094AD13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E844B181C57FB960094AD13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E844B191C57FB960094AD13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E844B1B1C57FB960094AD13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Meet A Muslim/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mywebnapp.Meet-A-Muslim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meet A Muslim-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E844B1C1C57FB960094AD13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Meet A Muslim/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mywebnapp.Meet-A-Muslim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meet A Muslim-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E844B031C57FB960094AD13 /* Build configuration list for PBXProject "Meet A Muslim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E844B181C57FB960094AD13 /* Debug */,
+				5E844B191C57FB960094AD13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E844B1A1C57FB960094AD13 /* Build configuration list for PBXNativeTarget "Meet A Muslim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E844B1B1C57FB960094AD13 /* Debug */,
+				5E844B1C1C57FB960094AD13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E844B001C57FB960094AD13 /* Project object */;
+}

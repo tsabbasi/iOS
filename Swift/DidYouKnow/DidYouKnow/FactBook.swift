@@ -25,8 +25,8 @@ struct FactBook {
     
     
     func randomFact() -> String {
-        var unsignedArrayCount = UInt32(factsArray.count)
-        var randomNumber = Int(arc4random_uniform(unsignedArrayCount))
+        let unsignedArrayCount = UInt32(factsArray.count)
+        let randomNumber = Int(arc4random_uniform(unsignedArrayCount))
         
         return factsArray[randomNumber]
     }

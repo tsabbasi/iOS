@@ -12,6 +12,7 @@ class RandomFactViewController: UIViewController, FactBookProtocolSwift {
   
     @IBOutlet var funFactLabel: UILabel!
     @IBOutlet var funFactButton: UIButton!
+    @IBOutlet var favorite: UIImageView!
     
     var spinner : UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -28,6 +29,10 @@ class RandomFactViewController: UIViewController, FactBookProtocolSwift {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("favoriteTapped:"))
+        favorite.userInteractionEnabled = true
+        favorite.addGestureRecognizer(tapGestureRecognizer)
 
         factBook.delegate = self
         
@@ -39,7 +44,7 @@ class RandomFactViewController: UIViewController, FactBookProtocolSwift {
         spinner.startAnimating()
         
         
-        var randomColor : UIColor = colorWheel.getColor()
+        let randomColor : UIColor = colorWheel.getColor()
         self.view.backgroundColor = randomColor
         self.funFactButton.tintColor = randomColor
         self.toolBar.barTintColor = UIColor.whiteColor()
@@ -55,13 +60,50 @@ class RandomFactViewController: UIViewController, FactBookProtocolSwift {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func favoriteTapped(img: AnyObject) {
+        
+//        self.view.makeToast(self.funFactLabel.text!)
+//        self.view.makeToast("Favorited!")
+        
+        let saveFavoriteResult = factBook.storeFacts(self.funFactLabel.text!)
+        
+        switch saveFavoriteResult {
+            case "Favorite Added":
+                toasting("Favorited", message: "Click Home - > My Favorites to view your favorited items.", duration: 1.5, imageName: "minion-success.png")
+                
+            case "Already Favorite":
+                toasting("Oops!", message: "Looks like this fact is already in your Favorites.\n\nClick Home - > My Favorites to view your favorited items.", duration: 5.0, imageName: "minion-duh.png")
+                
+            case "Failed To Save":
+                toasting("Oh No!", message: "Looks like someone's been sleeping on the job...We couldn't save your fact. Please try again.", duration: 3.0, imageName: "minion-fail.png")
+                
+            default:
+                toasting("Umm..", message: "Something went wrong, lets try that again", duration: 3.0, imageName: "minion-fail.png")
+            }
+        }
+    
+    
+    
+        
+    func toasting(title: String, message: String, duration: NSTimeInterval, imageName: String) {
+        
+            self.view.makeToast(message, duration: duration, position: .Bottom, title: title, image: UIImage(named: imageName), style:nil) { (didTap: Bool) -> Void in
+                if didTap {
+//                    print("completion from tap")
+                } else {
+//                    print("completion without tap")
+                }
+            
+        }
+    }
 
     
     @IBAction func showFunFact() {
         
         if (networkAvailable) {
             
-            var randomColor : UIColor = colorWheel.getColor()
+            let randomColor : UIColor = colorWheel.getColor()
             self.view.backgroundColor = randomColor
             self.funFactButton.tintColor = randomColor
             self.toolBar.tintColor = randomColor
@@ -78,7 +120,7 @@ class RandomFactViewController: UIViewController, FactBookProtocolSwift {
     
     @IBAction func goHome(sender: AnyObject) {
         
-        var topviewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        let topviewController = UIApplication.sharedApplication().keyWindow?.rootViewController
         
         topviewController?.dismissViewControllerAnimated(true, completion: nil)
         
@@ -103,9 +145,9 @@ class RandomFactViewController: UIViewController, FactBookProtocolSwift {
         
         self.funFactLabel.text = "Error getting facts"
         
-        var alert : AlertView = AlertView()
+        let alert : AlertView = AlertView()
         
-        var alertController : UIAlertController = alert.alert(alertTitle: "Error Downloading Facts", alertMessage: "Sorry, there was an error downloading facts. Please try restarting the app, or try again later.")
+        let alertController : UIAlertController = alert.alert(alertTitle: "Error Downloading Facts", alertMessage: "Sorry, there was an error downloading facts. Please try restarting the app, or try again later.")
         
         self.presentViewController(alertController, animated: true, completion: nil)
     

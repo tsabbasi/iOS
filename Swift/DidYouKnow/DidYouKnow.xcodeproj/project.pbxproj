@@ -172,6 +172,8 @@
 		5E80086C1B13E9D200B7DEAC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = TahaAbbasi;
 				TargetAttributes = {
@@ -430,6 +432,7 @@
 				5E8008951B13E9D200B7DEAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E8008961B13E9D200B7DEAC /* Build configuration list for PBXNativeTarget "DidYouKnowTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +441,7 @@
 				5E8008981B13E9D200B7DEAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

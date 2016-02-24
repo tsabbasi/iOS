@@ -21,7 +21,7 @@ class RandomGenerator: NSObject {
             let alertController : UIAlertController = alert.alert(alertTitle: completionDialogTitle as String, alertMessage: completionDialogMessage as String)
             previousRandomNumberArray.removeAll(keepCapacity: false)
             
-            var topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+            let topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
             
             topViewController?.presentViewController(alertController, animated: true, completion: nil)
             
@@ -30,7 +30,7 @@ class RandomGenerator: NSObject {
         
         random = Int(arc4random_uniform(UInt32(dictionary.count)))
         
-        while (contains(previousRandomNumberArray, random)) {
+        while (previousRandomNumberArray.contains(random)) {
             random = Int(arc4random_uniform(UInt32(dictionary.count)))
         }
         
@@ -44,7 +44,7 @@ class RandomGenerator: NSObject {
             let alertController : UIAlertController = alert.alert(alertTitle: "Ooops!", alertMessage: "Looks like someone messed up our facts file. Don't worry We'll fix it right away. If this issue continues, please contact tahaabbasi@me.com")
             previousRandomNumberArray.removeAll(keepCapacity: false)
             
-            var topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+            let topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
             
             topViewController?.presentViewController(alertController, animated: true, completion: nil)
             
@@ -69,7 +69,7 @@ class RandomGenerator: NSObject {
         
         random = Int(arc4random_uniform(UInt32(dictionary.count)))
         
-        while (contains(previousRandomNumberArray, random)) {
+        while (previousRandomNumberArray.contains(random)) {
             random = Int(arc4random_uniform(UInt32(dictionary.count)))
         }
         
@@ -98,7 +98,7 @@ class RandomGenerator: NSObject {
         
         random = Int(arc4random_uniform(UInt32(objectArray.count)))
         
-        while (contains(previousRandomNumberArray, random)) {
+        while (previousRandomNumberArray.contains(random)) {
             random = Int(arc4random_uniform(UInt32(objectArray.count)))
         }
         

@@ -220,7 +220,7 @@
 		5EDCAA081B0BA530000B1CD2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = TahaAbbasi;
 				TargetAttributes = {
 					5EDCAA0F1B0BA530000B1CD2 = {
@@ -361,6 +361,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -429,6 +430,7 @@
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "Photo Bomber/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abbasiindustries.tahaabbasi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "#Photos";
 				PROVISIONING_PROFILE = "89e757b6-56d9-45dc-a728-61817fa451fd";
 			};
@@ -443,6 +445,7 @@
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "Photo Bomber/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abbasiindustries.tahaabbasi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "#Photos";
 				PROVISIONING_PROFILE = "89e757b6-56d9-45dc-a728-61817fa451fd";
 			};
@@ -462,6 +465,7 @@
 				);
 				INFOPLIST_FILE = "Photo BomberTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abbasiindustries.tahaabbasi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photo Bomber.app/Photo Bomber";
 			};
@@ -477,6 +481,7 @@
 				);
 				INFOPLIST_FILE = "Photo BomberTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abbasiindustries.tahaabbasi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photo Bomber.app/Photo Bomber";
 			};

@@ -27,14 +27,24 @@ class FactBookSwift: NSObject, UIAlertViewDelegate, NSURLConnectionDelegate {
     var currentJoke = ""
     var randomGenerator : RandomGenerator = RandomGenerator()
     var delegate : FactBookProtocolSwift! = nil
+    var storedFactsArray = Array<String>()
+    var favoriteFactArray = Array<String>()
     
+    
+    // MARK: Checking for stored facts on device
+    func getStoredFacts() {
+        let storedFacts = Favorites(favoriteFacts: self.favoriteFactArray)
+        
+        print(storedFacts)
+    }
     
     
     func getFactsFromServer() {
         
-        var jsonFileUrl : NSURL = NSURL(string: "http://www.xcode.abbasiindustries.com/didyouknow/funFacts.json")!
         
-        var urlRequest : NSURLRequest = NSURLRequest(URL: jsonFileUrl)
+        let jsonFileUrl : NSURL = NSURL(string: "http://www.xcode.abbasiindustries.com/didyouknow/funFacts.json")!
+        
+        let urlRequest : NSURLRequest = NSURLRequest(URL: jsonFileUrl)
         
         var urlConnection : NSURLConnection = NSURLConnection(request: urlRequest, delegate: self)!
         
@@ -58,35 +68,45 @@ class FactBookSwift: NSObject, UIAlertViewDelegate, NSURLConnectionDelegate {
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
         
-        var error : NSError?
-        var jsonObjectDictionary: NSDictionary = (NSJSONSerialization.JSONObjectWithData(downloadedData, options: NSJSONReadingOptions.AllowFragments, error: &error) as? NSDictionary)!
         
-        if error != nil {
+        do {
             
-            self.delegate.errorDownloadingFacts()
-            return
+            let jsonObjectDictionary = try NSJSONSerialization.JSONObjectWithData(downloadedData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             
+            if jsonObjectDictionary.count == 0 {
+                
+                self.delegate.errorDownloadingFacts()
+                return
+                
+            }
+            
+            self.versionNumber = (jsonObjectDictionary.objectForKey("Version Number") as? Int)!
+            self.serverFactsCategories = (jsonObjectDictionary.objectForKey("Categories") as? NSMutableDictionary)!
+            self.randomFacts = (serverFactsCategories.objectForKey("randomfacts") as? NSMutableDictionary)!
+            self.engineeringMemes = (serverFactsCategories.objectForKey("engineeringMemes") as? NSMutableDictionary)!
+            self.stemFacts = (serverFactsCategories.objectForKey("stemFacts") as? NSMutableDictionary)!
+            self.jokes = (serverFactsCategories.objectForKey("jokes") as? NSMutableDictionary)!
+            
+            self.delegate.factsAreReady()
+            
+        } catch {
+            
+            print("JSON Serialization error")
+        
         }
         
-        self.versionNumber = (jsonObjectDictionary.objectForKey("Version Number") as? Int)!
-        self.serverFactsCategories = (jsonObjectDictionary.objectForKey("Categories") as? NSMutableDictionary)!
-        self.randomFacts = (serverFactsCategories.objectForKey("randomfacts") as? NSMutableDictionary)!
-        self.engineeringMemes = (serverFactsCategories.objectForKey("engineeringMemes") as? NSMutableDictionary)!
-        self.stemFacts = (serverFactsCategories.objectForKey("stemFacts") as? NSMutableDictionary)!
-        self.jokes = (serverFactsCategories.objectForKey("jokes") as? NSMutableDictionary)!
         
-        self.delegate.factsAreReady()
         
     }
     
     
     func connection(connection: NSURLConnection, didFailWithError error: NSError) {
         
-        var settingsAlert : AlertView = AlertView()
+        let settingsAlert : AlertView = AlertView()
         
-        var alertController : UIAlertController = settingsAlert.settingsAlert(alertTitle: "Connection Failed", alertMessage: "Sorry, Could not connect to the server. Please make sure your Cellular Data or Wifi is turned on in Settings.")
+        let alertController : UIAlertController = settingsAlert.settingsAlert(alertTitle: "Connection Failed", alertMessage: "Sorry, Could not connect to the server. Please make sure your Cellular Data or Wifi is turned on in Settings.")
         
-        var topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        let topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
         
         topViewController?.presentViewController(alertController, animated: true, completion: nil)
         
@@ -126,5 +146,72 @@ class FactBookSwift: NSObject, UIAlertViewDelegate, NSURLConnectionDelegate {
         return currentJoke
         
     }
+    
+    func storeFacts(favoritedFact : String) -> String {
+        
+        var result = ""
+        
+        if let storedFacts = loadStoredFacts() {
+            
+            favoriteFactArray = storedFacts
+            
+            if favoriteFactArray.contains(favoritedFact) {
+                result = "Already Favorite"
+            } else {
+                favoriteFactArray.append(favoritedFact)
+                let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(favoriteFactArray, toFile: Favorites.ArchiveURL.path!)
+                if !isSuccessfulSave {
+                    result = "Failed To Save"
+                } else {
+                    result = "Favorite Added"
+                }
+            }
+            
+        } else {
+            
+            if favoriteFactArray.contains(favoritedFact) {
+                result = "Already Favorite"
+            } else {
+                favoriteFactArray.append(favoritedFact)
+                let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(favoriteFactArray, toFile: Favorites.ArchiveURL.path!)
+                if !isSuccessfulSave {
+                    result = "Failed To Save"
+                } else {
+                    result = "Favorite Added"
+                }
+            }
+            
+        }
+        
+        return result
+        
+    }
+    
+    
+    
+    func updateFacts(updatedFavoritesArray : Array<String>) -> String {
+        
+        var result = ""
+            
+        favoriteFactArray = updatedFavoritesArray
+            
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(updatedFavoritesArray, toFile: Favorites.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            result = "Failed To Delete"
+        } else {
+            result = "Deleted"
+        }
+
+        
+        
+        
+        return result
+    }
+    
+    func loadStoredFacts() -> Array<String>? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Favorites.ArchiveURL.path!) as? Array<String>
+    }
+
     
 }
