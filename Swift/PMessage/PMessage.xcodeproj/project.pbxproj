@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E14A55E1C804EBB0003895C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E14A55D1C804EBB0003895C /* Default-568h@2x.png */; };
 		5E4AFEFC1C5D5E2D005A44EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AFEFB1C5D5E2D005A44EC /* AppDelegate.swift */; };
 		5E4AFEFE1C5D5E2D005A44EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AFEFD1C5D5E2D005A44EC /* ViewController.swift */; };
 		5E4AFF011C5D5E2D005A44EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4AFEFF1C5D5E2D005A44EC /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		1B303AE0973D06269BF3D6BB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302BE9AC18A1EC9AB07CA486 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5E14A55D1C804EBB0003895C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5E4AFEF81C5D5E2D005A44EC /* PMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4AFEFB1C5D5E2D005A44EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E4AFEFD1C5D5E2D005A44EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		5E4AFEEF1C5D5E2D005A44EC = {
 			isa = PBXGroup;
 			children = (
+				5E14A55D1C804EBB0003895C /* Default-568h@2x.png */,
 				5E4AFEFA1C5D5E2D005A44EC /* PMessage */,
 				5E4AFEF91C5D5E2D005A44EC /* Products */,
 				A46B3A3B1E448A06A3178461 /* Pods */,
@@ -167,6 +170,7 @@
 				5EC927C01C5F01EE0078462E /* PMessagePush.caf in Resources */,
 				5E4AFF061C5D5E2D005A44EC /* LaunchScreen.storyboard in Resources */,
 				5E4AFF031C5D5E2D005A44EC /* Assets.xcassets in Resources */,
+				5E14A55E1C804EBB0003895C /* Default-568h@2x.png in Resources */,
 				5E4AFF011C5D5E2D005A44EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

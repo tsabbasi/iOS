@@ -93,13 +93,9 @@ class SwipingViewController: UIViewController {
         
         let query = PFUser.query()!
         
-        if let latitude = PFUser.currentUser()?["location"]?.latitude {
+        if let loc = PFUser.currentUser()?["location"] {
+            query.whereKey("location", nearGeoPoint: loc as! PFGeoPoint, withinKilometers: 500000)
             
-            if let longitude = PFUser.currentUser()?["location"]?.longitude {
-                
-                query.whereKey("location", withinGeoBoxFromSouthwest: PFGeoPoint(latitude: latitude - 50, longitude: longitude - 50), toNortheast: PFGeoPoint(latitude: latitude + 50, longitude: longitude + 50))
-                
-            }
         }
         
         var meetAMuslim = true
