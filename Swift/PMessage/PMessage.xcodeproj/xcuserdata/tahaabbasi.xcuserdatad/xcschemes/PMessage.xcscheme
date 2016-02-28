@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E4AFEF71C5D5E2D005A44EC"
+               BlueprintIdentifier = "5E4D1F041C82CB8900ADA88A"
                BuildableName = "PMessage.app"
                BlueprintName = "PMessage"
                ReferencedContainer = "container:PMessage.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E4AFEF71C5D5E2D005A44EC"
+            BlueprintIdentifier = "5E4D1F041C82CB8900ADA88A"
             BuildableName = "PMessage.app"
             BlueprintName = "PMessage"
             ReferencedContainer = "container:PMessage.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E4AFEF71C5D5E2D005A44EC"
+            BlueprintIdentifier = "5E4D1F041C82CB8900ADA88A"
             BuildableName = "PMessage.app"
             BlueprintName = "PMessage"
             ReferencedContainer = "container:PMessage.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E4AFEF71C5D5E2D005A44EC"
+            BlueprintIdentifier = "5E4D1F041C82CB8900ADA88A"
             BuildableName = "PMessage.app"
             BlueprintName = "PMessage"
             ReferencedContainer = "container:PMessage.xcodeproj">
