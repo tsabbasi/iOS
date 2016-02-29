@@ -1,3 +1,15 @@
+
+New packet
+{     "messagePacket" :     {         "message" : "John Rambo Yaaraa",         "username" : "Cockroach Killer"     },     "pn_apns" : {         "aps" : {             "alert" : "Message from Taha!",             "badge" : 92345         }     } }
+
+
+{     "messagePacket" :     {         "message" : "Do Bara bheja",         "username" : "Riiino"     },     "pn_apns" : {         "aps" : {             "alert" : "Message from Taha!",             "badge" : 92345, "sound" : "PushTone.caf" }     } }
+
+
+
+
+
+OLD packet
 [{
     packet =     (
                 (
