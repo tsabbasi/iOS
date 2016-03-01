@@ -108,10 +108,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                     //do your API call magic!!
                     self.handleMeesageResponse(responseText)
+                    completionHandler()
                     
             }
         }
-        completionHandler()
+        
         
         
     }
