@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dToken : NSData?
     var client: PubNub?
-    
+    var cQueue: dispatch_queue_t?
 
     
 
@@ -86,25 +86,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
     
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+//        let configuration = PNConfiguration(publishKey: "pub-c-d860bb70-33c9-497d-86e2-17898714fbe4", subscribeKey: "sub-c-fff59fa4-c78f-11e5-8408-0619f8945a4f")
+//        client = PubNub.clientWithConfiguration(configuration)
+//        client!.subscribeToChannels(["TestingChannel9"], withPresence: true)
+        
+    }
+    
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], withResponseInfo responseInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
         
         if identifier == "TEXT_ACTION"{
             if let response = responseInfo[UIUserNotificationActionResponseTypedTextKey],
                 responseText = response as? String {
                     
+                    let configuration = PNConfiguration(publishKey: "pub-c-d860bb70-33c9-497d-86e2-17898714fbe4", subscribeKey: "sub-c-fff59fa4-c78f-11e5-8408-0619f8945a4f")
+                    
+                    client = PubNub.clientWithConfiguration(configuration)
+                    print("AD HandleAction Client \(client)")
+                    client!.subscribeToChannels(["TestingChannel9"], withPresence: true)
+                    print("AD HandleAction Channels \(client!.channels())")
+                        
                     //do your API call magic!!
                     self.handleMeesageResponse(responseText)
+                    
             }
         }
         completionHandler()
         
-        
-    }
-    
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        let configuration = PNConfiguration(publishKey: "pub-c-d860bb70-33c9-497d-86e2-17898714fbe4", subscribeKey: "sub-c-fff59fa4-c78f-11e5-8408-0619f8945a4f")
-        client = PubNub.clientWithConfiguration(configuration)
-        client!.subscribeToChannels(["TestingChannel9"], withPresence: true)
         
     }
     
@@ -115,15 +123,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func sendMessage(channel : String, messagePacket : [String : String]) {
         let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
-        
-        client!.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
-            
+        print("AD sendMessage Before Publish")
+        print("AD HandleAction Client \(client)")
+      
+        //TODO: Problem is here, the call back is not reached in background mode
+        self.client!.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
+        print("AD sendMessage After Publish")
             //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
             
             if !result.error {
                 print("SENT")
             } else {
                 print("AD Send Button Error: message send error: \(result.errorData)")
+                result.retry()
             }
             
         }

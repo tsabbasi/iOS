@@ -46,7 +46,9 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
         
         let configuration = PNConfiguration(publishKey: "pub-c-d860bb70-33c9-497d-86e2-17898714fbe4", subscribeKey: "sub-c-fff59fa4-c78f-11e5-8408-0619f8945a4f")
         client = PubNub.clientWithConfiguration(configuration)
+        print("VC Client \(client)")
         client.subscribeToChannels([channel], withPresence: true)
+        print("VC Channels \(client.channels())")
 //        devicePushToken = NSUserDefaults.standardUserDefaults().objectForKey("DeviceToken") as! NSData
         
         
@@ -121,7 +123,7 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
                 //   result.data.end - newest message time stamp in response
                 //   result.data.messages - list of messages
                 
-                print(result.data.messages)
+//                print(result.data.messages)
 //                self.addMessages(messages!)
                 
 
