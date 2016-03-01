@@ -71,14 +71,36 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
         self.textView.refreshFirstResponder()
         
         let message = self.textView.text
+        messagePacket.removeAll()
         messagePacket["username"] = userName
         messagePacket["message"] = message
-        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(userName)", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
+        sendMessage(messagePacket)
+        
+        
+        
+//        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(userName)", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
+//        
+//        client.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
+//
+////        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
+//        
+//            if !result.error {
+//                self.textView.text = ""
+//            } else {
+//                print("VC Send Button Error: message send error: \(result.errorData)")
+//            }
+//            
+//        }
+        
+    }
+    
+    func sendMessage(messagePacket : [String : String]) {
+        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
         
         client.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
-
-//        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
-        
+            
+            //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
+            
             if !result.error {
                 self.textView.text = ""
             } else {

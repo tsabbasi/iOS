@@ -26,10 +26,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = PNConfiguration(publishKey: "pub-c-d860bb70-33c9-497d-86e2-17898714fbe4", subscribeKey: "sub-c-fff59fa4-c78f-11e5-8408-0619f8945a4f")
         self.client = PubNub.clientWithConfiguration(configuration)
         
-
         
-        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        let textAction = UIMutableUserNotificationAction()
+        textAction.identifier = "TEXT_ACTION"
+        textAction.title = "Reply"
+        textAction.activationMode = .Background
+        textAction.authenticationRequired = false
+        textAction.destructive = false
+        textAction.behavior = .TextInput
+
+        let category = UIMutableUserNotificationCategory()
+        category.identifier = "CATEGORY_ID"
+        category.setActions([textAction], forContext: .Default)
+        category.setActions([textAction], forContext: .Minimal)
+        
+        let categories = NSSet(object: category) as! Set<UIUserNotificationCategory>
         // In iOS 8, this when the user receives a system prompt for notifications in your app
+        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         UIApplication.sharedApplication().registerForRemoteNotifications()
         
@@ -71,6 +84,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], withResponseInfo responseInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        
+        if identifier == "TEXT_ACTION"{
+            if let response = responseInfo[UIUserNotificationActionResponseTypedTextKey],
+                responseText = response as? String {
+                    
+                    //do your API call magic!!
+                    self.handleMeesageResponse(responseText)
+            }
+        }
+        completionHandler()
+        
+        
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        let configuration = PNConfiguration(publishKey: "pub-c-d860bb70-33c9-497d-86e2-17898714fbe4", subscribeKey: "sub-c-fff59fa4-c78f-11e5-8408-0619f8945a4f")
+        client = PubNub.clientWithConfiguration(configuration)
+        client!.subscribeToChannels(["TestingChannel9"], withPresence: true)
+        
+    }
+    
+    func handleMeesageResponse(responseText : String) {
+        print("HANDLING NOW")
+        sendMessage("TestingChannel9", messagePacket: ["username" : "PushResponse", "message" : responseText])
+    }
+    
+    func sendMessage(channel : String, messagePacket : [String : String]) {
+        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
+        
+        client!.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
+            
+            //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
+            
+            if !result.error {
+                print("SENT")
+            } else {
+                print("AD Send Button Error: message send error: \(result.errorData)")
+            }
+            
+        }
+        
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
