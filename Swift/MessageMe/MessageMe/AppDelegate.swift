@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var userName = ViewController().userName
     var userChannel = ViewController().userChannel
     var threadChannel = ViewController().threadChannel
+    var iPhone6PlusChannel = "C0147AED-F84D-4F3A-A3A6-F0E138B1F359Channel"
+    var iPhone5Channel = "C585AE7E-15BA-4E21-9C9D-94F9671B0C2CChannel"
+    var iPadAir2Channel = "B82EA857-618E-47D3-AFCB-1665671826C4Channel"
 
     
 
@@ -107,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     client = PubNub.clientWithConfiguration(configuration)
                     print("AD HandleAction Client \(client)")
-                    client!.subscribeToChannels(["TestingChannel9"], withPresence: true)
+                    client!.subscribeToChannels([userChannel, threadChannel], withPresence: true)
                     print("AD HandleAction Channels \(client!.channels())")
                         
                     //do your API call magic!!
@@ -123,17 +126,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func handleMeesageResponse(responseText : String) {
         print("HANDLING NOW")
-        sendMessage("TestingChannel9", messagePacket: ["username" : "PushResponse", "message" : responseText])
+        let mPacket : [String: String] = ["username" : userName, "message" : responseText]
+        sendMessage(threadChannel, messagePacket: mPacket)
+        if userChannel == iPhone6PlusChannel {
+            sendPushMessage(iPadAir2Channel, messagePacket: mPacket)
+        } else {
+            sendPushMessage(iPhone6PlusChannel, messagePacket: mPacket)
+        }
+        
     }
     
-    func sendMessage(channel : String, messagePacket : [String : String]) {
-        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
+    func sendMessage(intededThreadChannel : String, messagePacket : [String : String]) {
+        let messageJSON = ["messagePacket": messagePacket]
         print("AD sendMessage Before Publish")
         print("AD HandleAction Client \(client)")
       
         //TODO: Problem is here, the call back is not reached in background mode
-        self.client!.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
+        self.client!.publish(messageJSON, toChannel: intededThreadChannel) { (result: PNPublishStatus!) -> Void in
         print("AD sendMessage After Publish")
+            //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
+            
+            if !result.error {
+                print("SENT")
+            } else {
+                print("AD Send SendMessage publish error \(result.errorData)")
+                result.retry()
+            }
+            
+        }
+        
+    }
+    
+    func sendPushMessage(intendedUsersChannelName : String, messagePacket : [String : String]) {
+        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf", "category" : "CATEGORY_ID"]], "messagePacket": messagePacket]
+        print("AD sendMessage Before Publish")
+        print("AD HandleAction Client \(client)")
+        
+        //TODO: Problem is here, the call back is not reached in background mode
+        self.client!.publish(apns, toChannel: intendedUsersChannelName) { (result: PNPublishStatus!) -> Void in
+            print("AD sendMessage After Publish")
             //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
             
             if !result.error {
