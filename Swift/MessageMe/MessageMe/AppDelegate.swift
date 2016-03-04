@@ -23,6 +23,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var iPhone6PlusChannel = "C0147AED-F84D-4F3A-A3A6-F0E138B1F359Channel"
     var iPhone5Channel = "C585AE7E-15BA-4E21-9C9D-94F9671B0C2CChannel"
     var iPadAir2Channel = "B82EA857-618E-47D3-AFCB-1665671826C4Channel"
+    
+    
+    override init() {
+        super.init()
+        
+        switch userName {
+            case "C0147AED-F84D-4F3A-A3A6-F0E138B1F359":
+                userName = "iPhone 6 Plus"
+                break
+            
+            case "C585AE7E-15BA-4E21-9C9D-94F9671B0C2C":
+                userName = "iPhone 5"
+                break
+            
+            case "C585AE7E-15BA-4E21-9C9D-94F9671B0C2C":
+                userName = "iPad Air 2"
+                break
+            
+            default:
+                userName = ViewController().userName
+        }
+    }
 
     
 
@@ -130,8 +152,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sendMessage(threadChannel, messagePacket: mPacket)
         if userChannel == iPhone6PlusChannel {
             sendPushMessage(iPadAir2Channel, messagePacket: mPacket)
-        } else {
+            sendPushMessage(iPhone5Channel, messagePacket: mPacket)
+        } else if userChannel == iPhone5Channel {
             sendPushMessage(iPhone6PlusChannel, messagePacket: mPacket)
+            sendPushMessage(iPadAir2Channel, messagePacket: mPacket)
+        } else if userChannel == iPadAir2Channel {
+            sendPushMessage(iPhone6PlusChannel, messagePacket: mPacket)
+            sendPushMessage(iPhone5Channel, messagePacket: mPacket)
         }
         
     }
@@ -158,7 +185,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func sendPushMessage(intendedUsersChannelName : String, messagePacket : [String : String]) {
-        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf", "category" : "CATEGORY_ID"]], "messagePacket": messagePacket]
+        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"]!)", "badge" : 1, "sound" : "PushTone.caf", "category" : "CATEGORY_ID"]], "messagePacket": messagePacket]
         print("AD sendMessage Before Publish")
         print("AD HandleAction Client \(client)")
         

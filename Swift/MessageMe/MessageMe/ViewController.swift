@@ -28,9 +28,18 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
     var messages = [[String: String]]()
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if userName == "C0147AED-F84D-4F3A-A3A6-F0E138B1F359" {
+            self.userName = "iPhone 6 Plus"
+        } else if userName == "C585AE7E-15BA-4E21-9C9D-94F9671B0C2C" {
+            self.userName = "iPhone 5"
+        } else if userName == "B82EA857-618E-47D3-AFCB-1665671826C4" {
+            self.userName = "iPad Air 2"
+        }
         
         self.tableView.registerClass(MessageTableViewCell.self, forCellReuseIdentifier: "MessageTableViewCell")
         self.inverted = false
@@ -74,10 +83,16 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
         messagePacket["username"] = userName
         messagePacket["message"] = message
         sendMessage(messagePacket)
+        
         if userChannel == iPhone6PlusChannel {
             sendPushMessage(iPadAir2Channel, messagePacket: messagePacket)
-        } else {
+            sendPushMessage(iPhone5Channel, messagePacket: messagePacket)
+        } else if userChannel == iPhone5Channel {
             sendPushMessage(iPhone6PlusChannel, messagePacket: messagePacket)
+            sendPushMessage(iPadAir2Channel, messagePacket: messagePacket)
+        } else if userChannel == iPadAir2Channel {
+            sendPushMessage(iPhone6PlusChannel, messagePacket: messagePacket)
+            sendPushMessage(iPhone5Channel, messagePacket: messagePacket)
         }
         
         
@@ -102,7 +117,7 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
     }
     
     func sendPushMessage(intendedUsersChannelName : String, messagePacket : [String : String]) {
-        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf", "category" : "CATEGORY_ID"]], "messagePacket": messagePacket]
+        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"]!)", "badge" : 1, "sound" : "PushTone.caf", "category" : "CATEGORY_ID"]], "messagePacket": messagePacket]
         
         client.publish(apns, toChannel: intendedUsersChannelName) { (result: PNPublishStatus!) -> Void in
             
