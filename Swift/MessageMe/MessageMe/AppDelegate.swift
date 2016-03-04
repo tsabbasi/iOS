@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var dToken : NSData?
     var client: PubNub?
     var cQueue: dispatch_queue_t?
+    var userName = ViewController().userName
+    var userChannel = ViewController().userChannel
+    var threadChannel = ViewController().threadChannel
 
     
 
@@ -54,7 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(deviceToken)
         NSUserDefaults.standardUserDefaults().setObject(deviceToken, forKey: "DeviceToken")
         dToken = deviceToken
-        self.client?.addPushNotificationsOnChannels(["TestingChannel9"], withDevicePushToken: deviceToken,
+        print("Got channel before adding PushNotificaiton: \(userChannel)")
+        self.client?.addPushNotificationsOnChannels([userChannel], withDevicePushToken: deviceToken,
             andCompletion: { (status) -> Void in
                 
                 if !status.error {

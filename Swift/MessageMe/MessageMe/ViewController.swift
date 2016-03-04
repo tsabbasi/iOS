@@ -14,21 +14,14 @@ import SwiftyJSON
 class ViewController: SLKTextViewController, PNObjectEventListener {
     
     var client = PubNub()
-    var channel = "TestingChannel9"
-    var userName = ""
+    var userName = UIDevice.currentDevice().identifierForVendor!.UUIDString
+    var userChannel = "\(UIDevice.currentDevice().identifierForVendor!.UUIDString)Channel"
+    var threadChannel = "threadTest"
+    
     // Each message that is sent
     var messagePacket = [String : String]()
     // A list of all the messages displayed in the UI
     var messages = [[String: String]]()
-    
-    
-    
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBAction func publishButton(sender: AnyObject) {
-        
-        client.publish("iPhone 6 Here", toChannel: channel, withCompletion: nil)
-        
-    }
     
     
     override func viewDidLoad() {
@@ -38,16 +31,17 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
         self.tableView.registerClass(MessageTableViewCell.self, forCellReuseIdentifier: "MessageTableViewCell")
         self.inverted = false
         
-        let deviceId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
         
         // TODO: Username Logic
-        userName = deviceId
+        
         print(userName)
+        print(userChannel)
         
         let configuration = PNConfiguration(publishKey: "pub-c-d860bb70-33c9-497d-86e2-17898714fbe4", subscribeKey: "sub-c-fff59fa4-c78f-11e5-8408-0619f8945a4f")
         client = PubNub.clientWithConfiguration(configuration)
         print("VC Client \(client)")
-        client.subscribeToChannels([channel], withPresence: true)
+        client.subscribeToChannels([userChannel, threadChannel], withPresence: true)
         print("VC Channels \(client.channels())")
 //        devicePushToken = NSUserDefaults.standardUserDefaults().objectForKey("DeviceToken") as! NSData
         
@@ -79,34 +73,36 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
         sendMessage(messagePacket)
         
         
-        
-//        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(userName)", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
-//        
-//        client.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
-//
-////        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
-//        
-//            if !result.error {
-//                self.textView.text = ""
-//            } else {
-//                print("VC Send Button Error: message send error: \(result.errorData)")
-//            }
-//            
-//        }
-        
     }
     
     func sendMessage(messagePacket : [String : String]) {
         let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
         
-        client.publish(apns, toChannel: channel) { (result: PNPublishStatus!) -> Void in
+        client.publish(apns, toChannel: threadChannel) { (result: PNPublishStatus!) -> Void in
             
             //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
             
             if !result.error {
                 self.textView.text = ""
             } else {
-                print("VC Send Button Error: message send error: \(result.errorData)")
+                print("VC Send SendMessage publish error \(result.errorData)")
+            }
+            
+        }
+        
+    }
+    
+    func sendPushMessage(intendedUsersChannelName : String, messagePacket : [String : String]) {
+        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
+        
+        client.publish(apns, toChannel: intendedUsersChannelName) { (result: PNPublishStatus!) -> Void in
+            
+            //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
+            
+            if !result.error {
+                self.textView.text = ""
+            } else {
+                print("VC SendPushMessage publish error \(result.errorData)")
             }
             
         }
@@ -115,7 +111,7 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
     
     func loadMessages() {
         self.messages.removeAll()
-        client.historyForChannel(channel) { (result: PNHistoryResult!, status : PNErrorStatus!) -> Void in
+        client.historyForChannel(threadChannel) { (result: PNHistoryResult!, status : PNErrorStatus!) -> Void in
             
             if status == nil {
                 // Handle downloaded history using:
@@ -130,7 +126,9 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
                 var downloadedMessages = [[String : String]]()
                 
                 let allData = result.data.messages
-                var messages = result.data.messages[0]
+//                if let messages = result.data.messages[0] {
+//                    
+//                }
                 for messages in allData {
                     downloadedMessages.append(messages["messagePacket"] as! [String : String])
                 }
