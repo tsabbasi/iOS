@@ -16,7 +16,11 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
     var client = PubNub()
     var userName = UIDevice.currentDevice().identifierForVendor!.UUIDString
     var userChannel = "\(UIDevice.currentDevice().identifierForVendor!.UUIDString)Channel"
-    var threadChannel = "threadTest"
+    var intendedUserChannel = ""
+    var iPhone6PlusChannel = "C0147AED-F84D-4F3A-A3A6-F0E138B1F359Channel"
+    var iPhone5Channel = "C585AE7E-15BA-4E21-9C9D-94F9671B0C2CChannel"
+    var iPadAir2Channel = "B82EA857-618E-47D3-AFCB-1665671826C4Channel"
+    var threadChannel = "threadTest2"
     
     // Each message that is sent
     var messagePacket = [String : String]()
@@ -43,7 +47,6 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
         print("VC Client \(client)")
         client.subscribeToChannels([userChannel, threadChannel], withPresence: true)
         print("VC Channels \(client.channels())")
-//        devicePushToken = NSUserDefaults.standardUserDefaults().objectForKey("DeviceToken") as! NSData
         
         
         
@@ -71,14 +74,20 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
         messagePacket["username"] = userName
         messagePacket["message"] = message
         sendMessage(messagePacket)
+        if userChannel == iPhone6PlusChannel {
+            sendPushMessage(iPadAir2Channel, messagePacket: messagePacket)
+        } else {
+            sendPushMessage(iPhone6PlusChannel, messagePacket: messagePacket)
+        }
+        
         
         
     }
     
     func sendMessage(messagePacket : [String : String]) {
-        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
+        let messageJSON = ["messagePacket": messagePacket]
         
-        client.publish(apns, toChannel: threadChannel) { (result: PNPublishStatus!) -> Void in
+        client.publish(messageJSON, toChannel: threadChannel) { (result: PNPublishStatus!) -> Void in
             
             //        client.publish(messagePacket, toChannel: channel) { (result : PNPublishStatus!) -> Void in
             
@@ -93,7 +102,7 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
     }
     
     func sendPushMessage(intendedUsersChannelName : String, messagePacket : [String : String]) {
-        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf"]], "messagePacket": messagePacket]
+        let apns = ["pn_apns": ["aps" : ["alert" : "Message from \(messagePacket["username"])", "badge" : 1, "sound" : "PushTone.caf", "category" : "CATEGORY_ID"]], "messagePacket": messagePacket]
         
         client.publish(apns, toChannel: intendedUsersChannelName) { (result: PNPublishStatus!) -> Void in
             
@@ -119,35 +128,17 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
                 //   result.data.end - newest message time stamp in response
                 //   result.data.messages - list of messages
                 
-//                print(result.data.messages)
-//                self.addMessages(messages!)
+                print(result.data.messages)
                 
 
                 var downloadedMessages = [[String : String]]()
                 
                 let allData = result.data.messages
-//                if let messages = result.data.messages[0] {
-//                    
-//                }
+
                 for messages in allData {
                     downloadedMessages.append(messages["messagePacket"] as! [String : String])
                 }
-//                var packet = messages["messagePacket"] as! [String : String]
-//                var name = packet["username"]
-//                var body = packet["message"]
-//                print("All Data\n\n \(alldata)")
-//                print("First Message\n\n \(messages)")
-//                print("Message Packet\n\n \(packet)")
-//                print("Name\n\n \(name)")
-//                print("Message\n\n \(body)")
-                
-                
-                
-//                let messages = result.data.messages
-//                
-//                let allMessages = messages as! [[String: String]]
-//                
-//                print("All Messages:\n\(allMessages)\n")
+
                 self.addMessages(downloadedMessages)
                 
             } else {
@@ -162,8 +153,6 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
             }
             
         }
-//        let messages = self.generalChannel?.messages.allObjects()
-//        self.addMessages(messages!)
     }
     
     
@@ -197,14 +186,16 @@ class ViewController: SLKTextViewController, PNObjectEventListener {
     
     func client(client: PubNub!, didReceiveMessage message: PNMessageResult!) {
         
-//        self.messageLabel.text = (message.data.message as! String)
-        print(message.data.message)
+
+        var mPacket = [String: String]()
         let dataPacket = message.data.message
-        let messagePacket = dataPacket["messagePacket"] as! [String: String]
-//
-//        print("Current Message:\n\(message)\n")
-        self.addMessage(messagePacket)
-        
+        if let channel = message.data.subscribedChannel {
+            let myChannel = channel
+            if myChannel == threadChannel {
+                mPacket = dataPacket["messagePacket"] as! [String: String]
+                self.addMessage(mPacket)
+            }
+        }
     }
     
     
