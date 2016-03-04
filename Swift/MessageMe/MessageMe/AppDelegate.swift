@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 userName = "iPhone 5"
                 break
             
-            case "C585AE7E-15BA-4E21-9C9D-94F9671B0C2C":
+            case "B82EA857-618E-47D3-AFCB-1665671826C4":
                 userName = "iPad Air 2"
                 break
             
