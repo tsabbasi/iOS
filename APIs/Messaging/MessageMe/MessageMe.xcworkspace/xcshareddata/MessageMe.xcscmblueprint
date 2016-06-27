@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DA6809FC0287C524E2E53C3438F0A27A7EB72B2B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DA6809FC0287C524E2E53C3438F0A27A7EB72B2B" : 0,
+    "D383CEE4960746426135DA67A38EECC19289372E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D366F659-2C94-4F29-BE98-AE1D5B15F7C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DA6809FC0287C524E2E53C3438F0A27A7EB72B2B" : "Messaging\/",
+    "D383CEE4960746426135DA67A38EECC19289372E" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MessageMe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MessageMe\/MessageMe.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/abbasiindustries\/iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D383CEE4960746426135DA67A38EECC19289372E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/abbasiindustries\/Messaging.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DA6809FC0287C524E2E53C3438F0A27A7EB72B2B"
+    }
+  ]
+}
